@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Metal Magic",
+    "year": "1983",
+    "description": "Glam metal debut released on the band's own Metal Magic Records label. Produced by Jerry Abbott at Pantego Studios.",
+    "cover_image": "assets/images/albums/metal-magic.jpg"
+  },
+  {
+    "title": "Projects in the Jungle",
+    "year": "1984",
+    "description": "Second album showing heavier Judas Priest influences while remaining rooted in glam metal.",
+    "cover_image": "assets/images/albums/projects-in-the-jungle.jpg"
+  },
+  {
+    "title": "I Am the Night",
+    "year": "1985",
+    "description": "Third album with improved production and a heavier sound. Sold around 25,000 copies.",
+    "cover_image": "assets/images/albums/i-am-the-night.jpg"
+  },
+  {
+    "title": "Power Metal",
+    "year": "1988",
+    "description": "First album with Phil Anselmo. A transitional record blending glam, traditional metal, and thrash. The band ditches spandex for a more authentic image.",
+    "cover_image": "assets/images/albums/power-metal.jpg"
+  },
+  {
+    "title": "Cowboys from Hell",
+    "year": "1990",
+    "description": "Major-label debut on Atco Records and the birth of groove metal. The band's self-declared 'official' debut. Certified 2x Platinum. Features 'Cemetery Gates', hailed as one of metal's greatest ballads.",
+    "cover_image": "assets/images/albums/cowboys-from-hell.jpg"
+  },
+  {
+    "title": "Vulgar Display of Power",
+    "year": "1992",
+    "description": "The album that cemented Pantera's status as groove metal pioneers. 'Walk' became one of metal's most recognizable anthems. Certified 2x Platinum.",
+    "cover_image": "assets/images/albums/vulgar-display-of-power.jpg"
+  },
+  {
+    "title": "Far Beyond Driven",
+    "year": "1994",
+    "description": "Debuted at #1 on the Billboard 200 -- a rare feat for an extreme metal album. Features 'I'm Broken' and a Black Sabbath cover of 'Planet Caravan'. Certified Platinum.",
+    "cover_image": "assets/images/albums/far-beyond-driven.jpg"
+  },
+  {
+    "title": "The Great Southern Trendkill",
+    "year": "1996",
+    "description": "Recorded with the band members in separate studios due to internal tensions. Features the acclaimed guitar solo on 'Floods'. Certified Platinum.",
+    "cover_image": "assets/images/albums/the-great-southern-trendkill.jpg"
+  },
+  {
+    "title": "Reinventing the Steel",
+    "year": "2000",
+    "description": "Pantera's final studio album. A back-to-basics approach that peaked at #4 on the Billboard 200. Certified Gold.",
+    "cover_image": "assets/images/albums/reinventing-the-steel.jpg"
+  }
+]

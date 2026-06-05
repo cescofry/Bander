@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Dimebag Darrell",
+    "role": "Lead Guitar",
+    "active_period": "1981-2003",
+    "bio": "Born Darrell Lance Abbott, Dimebag Darrell co-founded Pantera at age 15 alongside his brother Vinnie Paul. He became one of the most celebrated guitarists in metal history, known for his innovative riffing style that fused southern blues feel with extreme aggression, and his wildly expressive solos. Guitar World ranked his solo on 'Floods' at #15 on their '100 Greatest Guitar Solos' list. He was tragically shot and killed on stage on December 8, 2004 while performing with Damageplan.",
+    "side_projects": ["Damageplan", "Rebel Meets Rebel"],
+    "images": [
+      "assets/images/members/dimebag-darrell.jpg",
+      "assets/images/members/dimebag-darrell-live.jpg"
+    ]
+  },
+  {
+    "name": "Vinnie Paul",
+    "role": "Drums",
+    "active_period": "1981-2003",
+    "bio": "Vincent Paul Abbott co-founded Pantera with his brother Dimebag Darrell while both were still teenagers. Known for his powerful, double-bass-driven drumming style and tight, punchy production, Vinnie Paul was the rhythmic backbone of Pantera's groove metal assault. After Pantera's breakup, he formed Damageplan with his brother and later Hellyeah. He passed away from heart failure on June 22, 2018.",
+    "side_projects": ["Damageplan", "Hellyeah", "Rebel Meets Rebel"],
+    "images": [
+      "assets/images/members/vinnie-paul.jpg"
+    ]
+  },
+  {
+    "name": "Phil Anselmo",
+    "role": "Vocals",
+    "active_period": "1986-2003, 2022-present",
+    "bio": "Philip Hansen Anselmo joined Pantera in 1986, replacing original vocalist Terry Glaze. His aggressive, guttural vocal delivery transformed the band's sound from glam metal to groove metal and became one of the most imitated vocal styles in heavy metal. Anselmo's raw intensity and commanding stage presence made him one of metal's most iconic frontmen. He has remained active through numerous side projects and led Pantera's 2022 reunion.",
+    "side_projects": ["Down", "Superjoint Ritual", "Philip H. Anselmo & the Illegals"],
+    "images": [
+      "assets/images/members/phil-anselmo.jpg",
+      "assets/images/members/phil-anselmo-2023.jpg"
+    ]
+  },
+  {
+    "name": "Rex Brown",
+    "role": "Bass",
+    "active_period": "1982-2003, 2022-present",
+    "bio": "Rex Robert Brown (originally performing as 'Rex Rocker') joined Pantera in 1982, replacing Tommy Bradford. His heavy, distorted bass lines provided the low-end foundation for Pantera's crushing groove. A solid and reliable player, Brown's bass work was integral to the band's wall-of-sound approach. After Pantera, he joined Down and later Kill Devil Hill before reuniting for the Pantera tribute tour in 2022.",
+    "side_projects": ["Down", "Kill Devil Hill", "Rex Brown solo"],
+    "images": [
+      "assets/images/members/rex-brown.jpg"
+    ]
+  },
+  {
+    "name": "Terry Glaze",
+    "role": "Vocals, Rhythm Guitar",
+    "active_period": "1981-1986",
+    "bio": "Terry Glaze was a founding member of Pantera, serving as vocalist and rhythm guitarist during the band's early glam metal era. He sang on the first three albums -- Metal Magic, Projects in the Jungle, and I Am the Night. As the band's sound evolved toward a heavier direction, creative differences led to his departure in 1986. He later formed the band Lord Tracy.",
+    "side_projects": ["Lord Tracy"],
+    "images": [
+      "assets/images/members/terry-glaze.jpg"
+    ]
+  }
+]

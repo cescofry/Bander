@@ -1,0 +1,154 @@
+[
+  {
+    "date": "1981",
+    "title": "Pantera Is Formed",
+    "description": "Brothers Vinnie Paul and Dimebag Darrell Abbott form Pantera in Arlington, Texas, along with guitarist/vocalist Terry Glaze. The band's name was inspired by the De Tomaso Pantera sports car.",
+    "category": "formation",
+    "image": null,
+    "members_involved": ["Dimebag Darrell", "Vinnie Paul", "Terry Glaze"]
+  },
+  {
+    "date": "1982",
+    "title": "Rex Brown Joins",
+    "description": "Bassist Rex Brown (then known as Rex Rocker) joins Pantera, completing the lineup that would record the band's first three albums.",
+    "category": "lineup_change",
+    "image": null,
+    "members_involved": ["Rex Brown"]
+  },
+  {
+    "date": "1983",
+    "title": "Metal Magic Released",
+    "description": "Pantera releases their debut album Metal Magic on their own Metal Magic Records label, produced by the Abbotts' father Jerry Abbott. The album showcases a glam metal sound influenced by Kiss, Def Leppard, and Van Halen.",
+    "category": "album_release",
+    "image": "assets/images/albums/metal-magic.jpg",
+    "members_involved": []
+  },
+  {
+    "date": "1984",
+    "title": "Projects in the Jungle Released",
+    "description": "Pantera's second album shows signs of a heavier direction with more Judas Priest-influenced elements, though still rooted in glam metal. Sold 15,000+ copies.",
+    "category": "album_release",
+    "image": "assets/images/albums/projects-in-the-jungle.jpg",
+    "members_involved": []
+  },
+  {
+    "date": "1985",
+    "title": "I Am the Night Released",
+    "description": "The third album features improved production and a heavier sound. Around 25,000 copies were sold, and the heavy metal press began taking notice of the band.",
+    "category": "album_release",
+    "image": "assets/images/albums/i-am-the-night.jpg",
+    "members_involved": []
+  },
+  {
+    "date": "1986",
+    "title": "Phil Anselmo Replaces Terry Glaze",
+    "description": "After creative differences, Terry Glaze departs. After auditioning several singers, 18-year-old Phil Anselmo from New Orleans is hired, bringing a harder-edged vocal style that would transform the band's sound.",
+    "category": "lineup_change",
+    "image": null,
+    "members_involved": ["Phil Anselmo", "Terry Glaze"]
+  },
+  {
+    "date": "1988",
+    "title": "Power Metal Released",
+    "description": "The fourth album, featuring Anselmo on vocals, showcases a dramatic shift toward a heavier sound -- a mix of glam metal, traditional metal, and thrash metal. The band also overhauls their image, abandoning spandex for jeans and t-shirts.",
+    "category": "album_release",
+    "image": "assets/images/albums/power-metal.jpg",
+    "members_involved": []
+  },
+  {
+    "date": "1990-07-24",
+    "title": "Cowboys from Hell Released",
+    "description": "Pantera's major-label debut on Atco Records marks a critical juncture in heavy metal history. Produced by Terry Date, the album abandons all glam metal influences in favor of a crushing groove metal sound. The band considers this their 'true' debut. Certified 2x Platinum by the RIAA.",
+    "category": "album_release",
+    "image": "assets/images/albums/cowboys-from-hell.jpg",
+    "members_involved": []
+  },
+  {
+    "date": "1991-09",
+    "title": "Monsters in Moscow",
+    "description": "Pantera plays to a crowd of over 500,000 at 'Monsters in Moscow' alongside AC/DC and Metallica, celebrating the freedom of performing Western music in the Soviet Union shortly before its dissolution.",
+    "category": "milestone",
+    "image": "assets/images/events/monsters-in-moscow.jpg",
+    "members_involved": ["Dimebag Darrell", "Vinnie Paul", "Phil Anselmo", "Rex Brown"]
+  },
+  {
+    "date": "1992-02-25",
+    "title": "Vulgar Display of Power Released",
+    "description": "Pantera's groove metal style reaches full fruition. 'Walk' becomes one of metal's most iconic anthems. The album enters the US charts at #44 and is certified 2x Platinum. The power metal falsetto vocals are replaced with a hardcore-influenced shouted delivery.",
+    "category": "album_release",
+    "image": "assets/images/albums/vulgar-display-of-power.jpg",
+    "members_involved": []
+  },
+  {
+    "date": "1994-03-22",
+    "title": "Far Beyond Driven Debuts at #1",
+    "description": "Pantera's seventh album debuts at number one on the Billboard 200 and Australian charts -- a remarkable achievement for an extreme metal album. 'I'm Broken' earns the band's first Grammy nomination. Certified Platinum by the RIAA.",
+    "category": "album_release",
+    "image": "assets/images/albums/far-beyond-driven.jpg",
+    "members_involved": []
+  },
+  {
+    "date": "1996-05-07",
+    "title": "The Great Southern Trendkill Released",
+    "description": "Recorded with Anselmo in New Orleans and the rest of the band in Dallas due to internal tensions, this is often called their 'overlooked' masterpiece. Dimebag's solo on 'Floods' is ranked #15 on Guitar World's '100 Greatest Guitar Solos' list.",
+    "category": "album_release",
+    "image": "assets/images/albums/the-great-southern-trendkill.jpg",
+    "members_involved": []
+  },
+  {
+    "date": "1996-07-13",
+    "title": "Anselmo's Near-Fatal Overdose",
+    "description": "Phil Anselmo overdoses on heroin after a Texas homecoming show. His heart stops beating for nearly five minutes before he is revived with an adrenaline shot. The incident sends shockwaves through the band.",
+    "category": "controversy",
+    "image": null,
+    "members_involved": ["Phil Anselmo"]
+  },
+  {
+    "date": "1997-07-29",
+    "title": "Official Live: 101 Proof Released",
+    "description": "Pantera releases their first live album, featuring 14 live tracks and two new studio recordings. Cowboys from Hell receives its first Platinum certification two weeks before the live album's release.",
+    "category": "album_release",
+    "image": null,
+    "members_involved": []
+  },
+  {
+    "date": "2000-03-21",
+    "title": "Reinventing the Steel Released",
+    "description": "Pantera's ninth and final studio album peaks at #4 on the Billboard 200. It represents a return to a more straightforward heavy metal approach. The album is certified Gold by the RIAA.",
+    "category": "album_release",
+    "image": "assets/images/albums/reinventing-the-steel.jpg",
+    "members_involved": []
+  },
+  {
+    "date": "2003",
+    "title": "Pantera Breaks Up",
+    "description": "After years of mounting tensions, largely stemming from Anselmo's drug issues and his focus on side projects, Pantera officially disbands. The Abbott brothers form Damageplan; Anselmo continues with Down.",
+    "category": "breakup",
+    "image": null,
+    "members_involved": ["Dimebag Darrell", "Vinnie Paul", "Phil Anselmo", "Rex Brown"]
+  },
+  {
+    "date": "2004-12-08",
+    "title": "Dimebag Darrell Murdered On Stage",
+    "description": "During a Damageplan concert at the Alrosa Villa in Columbus, Ohio, a deranged fan named Nathan Gale rushes the stage and fatally shoots Dimebag Darrell along with three others. The tragedy shakes the entire metal community and ends any hope of a Pantera reunion with the original lineup.",
+    "category": "death",
+    "image": "assets/images/events/dimebag-memorial.jpg",
+    "members_involved": ["Dimebag Darrell"]
+  },
+  {
+    "date": "2018-06-22",
+    "title": "Vinnie Paul Dies",
+    "description": "Vinnie Paul Abbott dies of dilated cardiomyopathy (heart failure) at age 54. With his death, Phil Anselmo and Rex Brown become the only surviving members of Pantera's classic lineup.",
+    "category": "death",
+    "image": null,
+    "members_involved": ["Vinnie Paul"]
+  },
+  {
+    "date": "2022-12-02",
+    "title": "Pantera Reunites",
+    "description": "Phil Anselmo and Rex Brown reunite under the Pantera name for the first time in over 20 years, with Zakk Wylde (guitar) and Charlie Benante (drums) filling in for the late Abbott brothers. The reformed lineup plays its first show at the Hell and Heaven festival in Mexico.",
+    "category": "reunion",
+    "image": "assets/images/events/pantera-reunion-2022.jpg",
+    "members_involved": ["Phil Anselmo", "Rex Brown"]
+  }
+]

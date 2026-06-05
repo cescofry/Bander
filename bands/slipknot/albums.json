@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Mate. Feed. Kill. Repeat.",
+    "year": "1996",
+    "description": "Self-financed debut demo album released on Halloween 1996. While commercially unsuccessful, it laid the groundwork for Slipknot's sound and attracted the attention of producer Ross Robinson.",
+    "cover_image": null
+  },
+  {
+    "title": "Slipknot",
+    "year": "1999",
+    "description": "The self-titled major-label debut that launched Slipknot into the mainstream. Certified 3x Platinum by the RIAA, it was the first platinum album on Roadrunner Records and introduced the world to their masked, nine-member assault.",
+    "cover_image": "assets/images/albums/slipknot.jpg"
+  },
+  {
+    "title": "Iowa",
+    "year": "2001",
+    "description": "Widely regarded as one of the heaviest albums ever recorded, Iowa peaked at #3 on the Billboard 200 and #1 in the UK. Its unrelenting intensity and dark themes represented the band at their most extreme and uncompromising.",
+    "cover_image": "assets/images/albums/iowa.jpg"
+  },
+  {
+    "title": "Vol. 3: (The Subliminal Verses)",
+    "year": "2004",
+    "description": "Produced by Rick Rubin, this album marked a creative evolution with more melodic and experimental elements. Peaking at #2 on the Billboard 200, it produced the Grammy-winning single 'Before I Forget' and fan favorite 'Duality'.",
+    "cover_image": "assets/images/albums/vol-3-the-subliminal-verses.jpg"
+  },
+  {
+    "title": "All Hope Is Gone",
+    "year": "2008",
+    "description": "Slipknot's first #1 album on the Billboard 200, featuring the iconic 'Psychosocial' and the emotional ballad 'Snuff'. It topped charts in multiple countries and cemented the band's status as arena-level headliners.",
+    "cover_image": "assets/images/albums/all-hope-is-gone.jpg"
+  },
+  {
+    "title": ".5: The Gray Chapter",
+    "year": "2014",
+    "description": "Dedicated to the late Paul Gray, this emotionally charged album debuted at #1 on the Billboard 200. It marked the first album with new members Jay Weinberg and Alessandro Venturella replacing Jordison and Gray.",
+    "cover_image": "assets/images/albums/5-the-gray-chapter.jpg"
+  },
+  {
+    "title": "We Are Not Your Kind",
+    "year": "2019",
+    "description": "The band's third consecutive #1 album on the Billboard 200 and first UK #1 in 18 years. Praised for its experimental approach blending industrial textures with their signature heaviness, it reinforced Slipknot's continued relevance.",
+    "cover_image": "assets/images/albums/we-are-not-your-kind.jpg"
+  },
+  {
+    "title": "The End, So Far",
+    "year": "2022",
+    "description": "Slipknot's seventh studio album and final release under Roadrunner Records. It experiments with a wider sonic palette while retaining the band's aggressive core, debuting at #2 on the Billboard 200 and #1 in the UK and Germany.",
+    "cover_image": "assets/images/albums/the-end-so-far.jpg"
+  }
+]

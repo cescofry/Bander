@@ -1,0 +1,170 @@
+[
+  {
+    "date": "1986",
+    "title": "Band Formation",
+    "description": "John Rzeznik and Robby Takac form the Goo Goo Dolls in Buffalo, New York, initially performing as a cover band under the name 'The Sex Maggots' before a venue owner insists on a name change. They recruit drummer George Tutuska to complete the lineup.",
+    "category": "formation",
+    "image": null,
+    "members_involved": ["John Rzeznik", "Robby Takac", "George Tutuska"]
+  },
+  {
+    "date": "1987",
+    "title": "First EP Released",
+    "description": "The band self-releases their debut EP on Celluloid Records, establishing themselves in the Buffalo punk scene with raw, energetic tracks.",
+    "category": "milestone",
+    "image": null,
+    "members_involved": ["John Rzeznik", "Robby Takac", "George Tutuska"]
+  },
+  {
+    "date": "1989",
+    "title": "Jed Released",
+    "description": "The Goo Goo Dolls release their debut full-length album Jed on Metal Blade Records, showcasing their Replacements-influenced punk rock sound.",
+    "category": "album_release",
+    "image": "assets/images/albums/jed.jpg",
+    "members_involved": ["John Rzeznik", "Robby Takac", "George Tutuska"]
+  },
+  {
+    "date": "1990",
+    "title": "Hold Me Up Released",
+    "description": "The band releases their second album Hold Me Up, continuing their punk-pop trajectory while gaining more regional attention and touring extensively.",
+    "category": "album_release",
+    "image": "assets/images/albums/hold-me-up.jpg",
+    "members_involved": ["John Rzeznik", "Robby Takac", "George Tutuska"]
+  },
+  {
+    "date": "1993-02",
+    "title": "Superstar Car Wash Released",
+    "description": "Superstar Car Wash, their third album and first on Warner Bros. Records, marks the beginning of their transition toward a more polished alternative rock sound.",
+    "category": "album_release",
+    "image": "assets/images/albums/superstar-car-wash.jpg",
+    "members_involved": ["John Rzeznik", "Robby Takac", "George Tutuska"]
+  },
+  {
+    "date": "1995-03",
+    "title": "A Boy Named Goo Released",
+    "description": "A Boy Named Goo becomes the band's commercial breakthrough, propelled by the hit single 'Name' which reaches #5 on the Billboard Hot 100. The album goes double platinum.",
+    "category": "album_release",
+    "image": "assets/images/albums/a-boy-named-goo.jpg",
+    "members_involved": ["John Rzeznik", "Robby Takac"]
+  },
+  {
+    "date": "1995",
+    "title": "George Tutuska Departs",
+    "description": "Original drummer George Tutuska leaves the band amid the recording sessions for A Boy Named Goo. He is replaced by Mike Malinin, who will remain the band's drummer for nearly two decades.",
+    "category": "lineup_change",
+    "image": null,
+    "members_involved": ["George Tutuska", "Mike Malinin"]
+  },
+  {
+    "date": "1998-04",
+    "title": "'Iris' Released on City of Angels Soundtrack",
+    "description": "'Iris,' written by Rzeznik for the film City of Angels, becomes one of the biggest songs of the decade. It spends 18 weeks at #1 on the Hot 100 Airplay chart and is later named Billboard's #1 Pop Song of 1992-2012.",
+    "category": "milestone",
+    "image": null,
+    "members_involved": ["John Rzeznik"]
+  },
+  {
+    "date": "1998-09",
+    "title": "Dizzy Up the Girl Released",
+    "description": "Dizzy Up the Girl becomes the band's best-selling album, reaching quadruple platinum status. It spawns hit singles 'Slide,' 'Black Balloon,' and 'Broadway' alongside the already-massive 'Iris.'",
+    "category": "album_release",
+    "image": "assets/images/albums/dizzy-up-the-girl.jpg",
+    "members_involved": ["John Rzeznik", "Robby Takac", "Mike Malinin"]
+  },
+  {
+    "date": "1999",
+    "title": "Grammy Nominations for 'Iris'",
+    "description": "The Goo Goo Dolls receive Grammy nominations for Record of the Year, Best Pop Performance by Duo or Group, and Best Rock Song for 'Iris,' cementing the song's status as a cultural touchstone.",
+    "category": "milestone",
+    "image": null,
+    "members_involved": ["John Rzeznik", "Robby Takac", "Mike Malinin"]
+  },
+  {
+    "date": "2002-04",
+    "title": "Gutterflower Released",
+    "description": "Gutterflower continues the band's mainstream success with singles 'Here Is Gone' and 'Sympathy.' The album reaches platinum status.",
+    "category": "album_release",
+    "image": "assets/images/albums/gutterflower.jpg",
+    "members_involved": ["John Rzeznik", "Robby Takac", "Mike Malinin"]
+  },
+  {
+    "date": "2004-07-04",
+    "title": "Massive Hometown Concert in Buffalo",
+    "description": "The Goo Goo Dolls perform a landmark free Independence Day concert in Buffalo, New York, drawing an estimated 60,000 fans. The performance is released as a live album.",
+    "category": "milestone",
+    "image": null,
+    "members_involved": ["John Rzeznik", "Robby Takac", "Mike Malinin"]
+  },
+  {
+    "date": "2006-04",
+    "title": "Let Love In Released",
+    "description": "Let Love In features the hit singles 'Better Days,' 'Give a Little Bit' (a Supertramp cover), and 'Stay with You,' marking the band's continued radio relevance in the 2000s.",
+    "category": "album_release",
+    "image": "assets/images/albums/let-love-in.jpg",
+    "members_involved": ["John Rzeznik", "Robby Takac", "Mike Malinin"]
+  },
+  {
+    "date": "2008",
+    "title": "Songwriters Hall of Fame",
+    "description": "John Rzeznik is inducted into the Songwriters Hall of Fame, recognizing his contributions as one of the most successful rock songwriters of the 1990s and 2000s.",
+    "category": "milestone",
+    "image": null,
+    "members_involved": ["John Rzeznik"]
+  },
+  {
+    "date": "2010-08",
+    "title": "Something for the Rest of Us Released",
+    "description": "The band's eighth studio album Something for the Rest of Us explores darker, more introspective themes while maintaining their signature melodic approach.",
+    "category": "album_release",
+    "image": "assets/images/albums/something-for-the-rest-of-us.jpg",
+    "members_involved": ["John Rzeznik", "Robby Takac", "Mike Malinin"]
+  },
+  {
+    "date": "2012-10",
+    "title": "'Iris' Named #1 Pop Song of Two Decades",
+    "description": "Billboard names 'Iris' the #1 Pop Song on its 'Top 100 Pop Songs 1992-2012' chart, confirming the song's enduring legacy across two decades of popular music.",
+    "category": "milestone",
+    "image": null,
+    "members_involved": ["John Rzeznik"]
+  },
+  {
+    "date": "2013",
+    "title": "Mike Malinin Departs",
+    "description": "After 18 years as the band's drummer, Mike Malinin departs the Goo Goo Dolls. He is subsequently replaced by Craig Macintyre.",
+    "category": "lineup_change",
+    "image": null,
+    "members_involved": ["Mike Malinin", "Craig Macintyre"]
+  },
+  {
+    "date": "2013-06",
+    "title": "Magnetic Released",
+    "description": "Magnetic represents a sonic shift with more synth-driven production and electronic textures layered over the band's guitar-driven foundation.",
+    "category": "album_release",
+    "image": "assets/images/albums/magnetic.jpg",
+    "members_involved": ["John Rzeznik", "Robby Takac"]
+  },
+  {
+    "date": "2016-05",
+    "title": "Boxes Released",
+    "description": "Boxes continues the band's exploration of modern production techniques, with singles 'So Alive' and 'Over and Over' receiving solid radio play.",
+    "category": "album_release",
+    "image": "assets/images/albums/boxes.jpg",
+    "members_involved": ["John Rzeznik", "Robby Takac", "Craig Macintyre"]
+  },
+  {
+    "date": "2019-09",
+    "title": "Miracle Pill Released",
+    "description": "Miracle Pill marks the band's twelfth studio album, featuring a mix of anthemic rock and introspective ballads that showcase the continued evolution of Rzeznik's songwriting.",
+    "category": "album_release",
+    "image": "assets/images/albums/miracle-pill.jpg",
+    "members_involved": ["John Rzeznik", "Robby Takac", "Craig Macintyre"]
+  },
+  {
+    "date": "2022-08",
+    "title": "Chaos in Bloom Released",
+    "description": "Chaos in Bloom, the band's thirteenth studio album, is self-produced by Rzeznik for the first time and embraces a more raw, guitar-forward sound reminiscent of their earlier work.",
+    "category": "album_release",
+    "image": "assets/images/albums/chaos-in-bloom.jpg",
+    "members_involved": ["John Rzeznik", "Robby Takac", "Craig Macintyre"]
+  }
+]

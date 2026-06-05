@@ -1,0 +1,42 @@
+[
+  {
+    "name": "John Rzeznik",
+    "role": "Lead Vocals, Guitar",
+    "active_period": "1986-present",
+    "bio": "John Rzeznik is the co-founder, lead vocalist, guitarist, and primary songwriter of the Goo Goo Dolls. Born in Buffalo, New York to a Polish-American working-class family, he formed the band with Robby Takac in 1986 and steered their evolution from punk covers to the polished alternative rock that produced hits like 'Iris,' 'Slide,' and 'Name.' Rzeznik was inducted into the Songwriters Hall of Fame in 2008 and has been open about overcoming personal struggles with alcoholism.",
+    "side_projects": ["Solo work", "Film soundtrack contributions (Treasure Planet, City of Angels)"],
+    "images": ["assets/images/members/john-rzeznik.jpg"]
+  },
+  {
+    "name": "Robby Takac",
+    "role": "Bass, Vocals",
+    "active_period": "1986-present",
+    "bio": "Robby Takac is the co-founder and bassist of the Goo Goo Dolls, providing backing and occasional lead vocals on the band's more aggressive tracks. His energetic punk-influenced bass style anchored the band's early sound and continues to add grit to their live performances. Outside the band, Takac founded Good Charamel Records and runs a music education program in Buffalo.",
+    "side_projects": ["Good Charamel Records", "Music Is Art Festival"],
+    "images": ["assets/images/members/robby-takac.jpg"]
+  },
+  {
+    "name": "Mike Malinin",
+    "role": "Drums, Percussion",
+    "active_period": "1995-2013",
+    "bio": "Mike Malinin joined the Goo Goo Dolls in 1995, replacing original drummer George Tutuska just as the band was on the cusp of mainstream success. He was the drummer on all of their biggest records including A Boy Named Goo, Dizzy Up the Girl, and Gutterflower, helping define the band's arena-ready sound. He departed the band in 2013 and later played with Tanya Tucker.",
+    "side_projects": ["Tanya Tucker band", "The FBR"],
+    "images": ["assets/images/members/mike-malinin.jpg"]
+  },
+  {
+    "name": "George Tutuska",
+    "role": "Drums",
+    "active_period": "1986-1995",
+    "bio": "George Tutuska was the original drummer of the Goo Goo Dolls, co-founding the band alongside Rzeznik and Takac in 1986. He played on the band's first three albums -- Jed, Hold Me Up, and Superstar Car Wash -- which established their scrappy punk-influenced identity. He was replaced by Mike Malinin in 1995 amid the sessions for A Boy Named Goo.",
+    "side_projects": [],
+    "images": ["assets/images/members/george-tutuska.jpg"]
+  },
+  {
+    "name": "Craig Macintyre",
+    "role": "Drums, Percussion",
+    "active_period": "2014-present",
+    "bio": "Craig Macintyre became the Goo Goo Dolls' drummer in 2014 following Mike Malinin's departure. A seasoned session musician from Buffalo, he brought a fresh rhythmic energy to the band's later albums including Boxes, Miracle Pill, and Chaos in Bloom. His versatile drumming style has helped the band adapt to more modern production approaches.",
+    "side_projects": [],
+    "images": ["assets/images/members/craig-macintyre.jpg"]
+  }
+]

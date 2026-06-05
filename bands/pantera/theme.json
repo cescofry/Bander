@@ -1,0 +1,39 @@
+{
+  "style": "Cinematic Dark Stage",
+  "colors": {
+    "bg": "#0a0a1a",
+    "bg_secondary": "#111128",
+    "surface": "#1a1a2e",
+    "text": "#e0e0e0",
+    "text_muted": "#888",
+    "accent": "#4fc3f7",
+    "accent_secondary": "#7c4dff",
+    "nav_bg": "rgba(10, 10, 26, 0.95)",
+    "border": "rgba(255, 255, 255, 0.08)"
+  },
+  "badges": {
+    "formation": "#4caf50",
+    "album_release": "#00bcd4",
+    "lineup_change": "#e91e63",
+    "milestone": "#ffc107",
+    "controversy": "#ff5722",
+    "breakup": "#9e9e9e",
+    "reunion": "#8bc34a",
+    "death": "#616161",
+    "official": "#4fc3f7",
+    "live": "#ff9800",
+    "interview": "#ab47bc",
+    "documentary": "#26a69a",
+    "other": "#78909c"
+  },
+  "fonts": {
+    "heading": "Montserrat",
+    "body": "Inter",
+    "heading_weights": "400;600;700;800;900",
+    "body_weights": "300;400;500;600"
+  },
+  "hero": {
+    "effect": "spotlight",
+    "tagline_separator": "|"
+  }
+}

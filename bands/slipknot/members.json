@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Corey Taylor",
+    "role": "Vocals (#8)",
+    "active_period": "1997-present",
+    "bio": "Corey Taylor joined Slipknot in 1997 from fellow Des Moines band Stone Sour, bringing the melodic vocal range the band needed to complement their extreme aggression. His versatile vocal style, shifting between guttural screams and clean singing, became the defining sonic signature of Slipknot and propelled them to mainstream success. Taylor is widely regarded as one of the most versatile vocalists in heavy metal.",
+    "side_projects": ["Stone Sour", "Solo career", "Author"],
+    "images": ["assets/images/members/corey-taylor.jpg"]
+  },
+  {
+    "name": "Shawn 'Clown' Crahan",
+    "role": "Percussion / Custom Percussion (#6)",
+    "active_period": "1995-present",
+    "bio": "Shawn Crahan is the last remaining founding member of Slipknot and the creative visionary behind much of the band's visual identity, including their iconic masks and stage design. Known as 'Clown,' he co-founded the band in 1995 and has directed many of their music videos. His aggressive custom percussion style, often performed on beer kegs, adds a primal layer to the band's massive sound.",
+    "side_projects": ["To My Surprise", "Dirty Little Rabbits", "Film Director"],
+    "images": ["assets/images/members/shawn-crahan.jpg"]
+  },
+  {
+    "name": "Mick Thomson",
+    "role": "Guitar (#7)",
+    "active_period": "1996-present",
+    "bio": "Mick Thomson joined Slipknot in 1996 as a replacement guitarist and quickly became essential to the band's crushingly heavy sound. His downtuned, rhythmically precise riffing style anchors Slipknot's most aggressive material, and his technical prowess has made him one of the most respected guitarists in modern metal. Thomson's imposing stage presence and distinctive mask make him one of the band's most recognizable figures.",
+    "side_projects": [],
+    "images": ["assets/images/members/mick-thomson.jpg"]
+  },
+  {
+    "name": "Jim Root",
+    "role": "Guitar (#4)",
+    "active_period": "1999-present",
+    "bio": "Jim Root replaced Josh Brainard during the recording of Slipknot's self-titled debut album in early 1999. His melodic lead guitar work provides a crucial counterpoint to Thomson's heavy rhythm playing, adding atmospheric depth and texture to the band's sound. Root's contributions became increasingly prominent on later albums, particularly on Vol. 3 and We Are Not Your Kind.",
+    "side_projects": ["Stone Sour"],
+    "images": ["assets/images/members/jim-root.jpg"]
+  },
+  {
+    "name": "Sid Wilson",
+    "role": "Turntables / DJ (#0)",
+    "active_period": "1998-present",
+    "bio": "Sid Wilson was recruited as Slipknot's ninth member in 1998, bringing turntablism and electronic elements to the band's already dense sonic palette. Known for his extreme stage antics, including jumping from balconies and lighting himself on fire, Wilson's DJ scratches and samples add a unique dimension that separates Slipknot from traditional metal bands.",
+    "side_projects": ["DJ Starscream"],
+    "images": ["assets/images/members/sid-wilson.jpg"]
+  },
+  {
+    "name": "Alessandro Venturella",
+    "role": "Bass (#V)",
+    "active_period": "2014-present",
+    "bio": "Alessandro Venturella stepped in as Slipknot's bassist following the deaths and departures that reshaped the band in the early 2010s. An Italian-British musician, he brought fresh energy to the band's live performances and has been a key contributor to their studio work from .5: The Gray Chapter onward.",
+    "side_projects": [],
+    "images": ["assets/images/members/alessandro-venturella.jpg"]
+  },
+  {
+    "name": "Michael Pfaff",
+    "role": "Percussion (#6.5)",
+    "active_period": "2019-present",
+    "bio": "Michael Pfaff replaced Chris Fehn as Slipknot's percussionist in 2019, bringing his own energy and stage presence to the role. He has contributed to the band's touring lineup and recorded on The End, So Far, helping maintain the dual-percussion attack that is central to Slipknot's sound.",
+    "side_projects": [],
+    "images": ["assets/images/members/michael-pfaff.jpg"]
+  },
+  {
+    "name": "Eloy Casagrande",
+    "role": "Drums",
+    "active_period": "2024-present",
+    "bio": "Brazilian drummer Eloy Casagrande, formerly of Sepultura, joined Slipknot in 2024 as the replacement for Jay Weinberg. Widely regarded as one of the most technically gifted drummers in extreme metal, his appointment signaled a new chapter for the band as they prepare their eighth studio album.",
+    "side_projects": ["Sepultura"],
+    "images": ["assets/images/members/eloy-casagrande.jpg"]
+  },
+  {
+    "name": "Paul Gray",
+    "role": "Bass (#2)",
+    "active_period": "1995-2010",
+    "bio": "Paul Gray was a founding member of Slipknot and widely considered the heart and soul of the band. His bass playing provided the low-end foundation for some of the heaviest music of the era, while his collaborative spirit held the volatile nine-member group together. Gray died on May 24, 2010, from an accidental overdose, and the band's fifth album .5: The Gray Chapter was dedicated to his memory.",
+    "side_projects": [],
+    "images": ["assets/images/members/paul-gray.jpg"]
+  },
+  {
+    "name": "Joey Jordison",
+    "role": "Drums (#1)",
+    "active_period": "1995-2013",
+    "bio": "Joey Jordison was a co-founding member of Slipknot and one of the most technically accomplished drummers in heavy metal history. His blistering speed, complex patterns, and relentless energy defined the rhythmic backbone of Slipknot's first four albums. Jordison was dismissed from the band in 2013 due to complications from transverse myelitis and passed away on July 26, 2021.",
+    "side_projects": ["Murderdolls", "Sinsaenum", "Scar the Martyr"],
+    "images": ["assets/images/members/joey-jordison.jpg"]
+  },
+  {
+    "name": "Chris Fehn",
+    "role": "Percussion (#3)",
+    "active_period": "1998-2019",
+    "bio": "Chris Fehn served as one of Slipknot's percussionists for over two decades, known for his distinctive long-nosed Pinocchio-style mask. His percussion work alongside Clown created the thunderous rhythmic wall that defined Slipknot's live shows. Fehn was dismissed from the band in 2019 after filing a lawsuit over financial disputes.",
+    "side_projects": [],
+    "images": ["assets/images/members/chris-fehn.jpg"]
+  },
+  {
+    "name": "Craig Jones",
+    "role": "Samples / Keyboards (#5)",
+    "active_period": "1996-2023",
+    "bio": "Craig Jones originally joined Slipknot as a guitarist but transitioned to samples and keyboards when Mick Thomson was brought in. His atmospheric soundscapes, industrial noise, and electronic textures added a crucial layer of sonic depth that distinguished Slipknot from their metal contemporaries. Jones departed the band in 2023.",
+    "side_projects": [],
+    "images": ["assets/images/members/craig-jones.jpg"]
+  }
+]

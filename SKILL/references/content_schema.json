@@ -1,0 +1,150 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Band Package",
+  "description": "Data contract for a band package. Each band lives in its own folder under bands/<slug>/ with one or more JSON files and local assets.",
+
+  "definitions": {
+    "band": {
+      "title": "band.json",
+      "description": "Required. Core metadata for the band.",
+      "type": "object",
+      "required": ["name", "slug"],
+      "properties": {
+        "name":        { "type": "string", "description": "Band or artist name." },
+        "slug":        { "type": "string", "description": "URL-safe folder name (lowercase, hyphens)." },
+        "formed":      { "type": "string", "description": "Year formed or birth year." },
+        "dissolved":   { "type": "string", "description": "Year dissolved, if applicable." },
+        "origin":      { "type": "string", "description": "City/country of origin." },
+        "genres":      { "type": "array",  "items": { "type": "string" }, "description": "List of genres." },
+        "labels":      { "type": "array",  "items": { "type": "string" }, "description": "Record labels." },
+        "description": { "type": "string", "description": "2-3 sentence overview." },
+        "trivia":      { "type": "array",  "items": { "type": "string" }, "description": "Fun facts for the footer." }
+      }
+    },
+
+    "member": {
+      "type": "object",
+      "required": ["name", "role"],
+      "properties": {
+        "name":          { "type": "string", "description": "Full name." },
+        "role":          { "type": "string", "description": "Instrument or role." },
+        "active_period": { "type": "string", "description": "e.g. '1965-1968' or '1968-present'." },
+        "bio":           { "type": "string", "description": "2-3 sentence biography focused on band contribution." },
+        "side_projects": { "type": "array",  "items": { "type": "string" }, "description": "Notable side projects." },
+        "images": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Paths relative to the band folder (e.g. 'assets/images/members/name.jpg')."
+        }
+      }
+    },
+
+    "event": {
+      "type": "object",
+      "required": ["date", "title", "category"],
+      "properties": {
+        "date":        { "type": "string", "description": "ISO date or year (e.g. '1973' or '1973-03-01')." },
+        "title":       { "type": "string", "description": "Short event title." },
+        "description": { "type": "string", "description": "1-3 sentence event description." },
+        "category": {
+          "type": "string",
+          "enum": ["formation", "album_release", "lineup_change", "milestone", "controversy", "breakup", "reunion", "death", "other"],
+          "description": "Event category for color-coding."
+        },
+        "image": { "type": ["string", "null"], "description": "Relative path to event image, or null." },
+        "members_involved": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Names of members relevant to this event."
+        }
+      }
+    },
+
+    "album": {
+      "type": "object",
+      "required": ["title", "year"],
+      "properties": {
+        "title":       { "type": "string", "description": "Album title." },
+        "year":        { "type": "string", "description": "Release year." },
+        "description": { "type": "string", "description": "1-2 sentence significance." },
+        "cover_image": { "type": "string", "description": "Relative path to cover art." }
+      }
+    },
+
+    "video": {
+      "type": "object",
+      "required": ["title", "youtube_url"],
+      "properties": {
+        "title":       { "type": "string", "description": "Video title." },
+        "youtube_url": { "type": "string", "description": "Full YouTube URL." },
+        "category": {
+          "type": "string",
+          "enum": ["official", "live", "interview", "documentary", "other"],
+          "description": "Video category."
+        },
+        "year": { "type": "string", "description": "Year of the video or performance." }
+      }
+    },
+
+    "theme": {
+      "title": "theme.json",
+      "description": "Optional. Visual customization tokens for this band.",
+      "type": "object",
+      "properties": {
+        "style": { "type": "string", "description": "Name of the visual direction." },
+        "colors": {
+          "type": "object",
+          "properties": {
+            "bg":               { "type": "string" },
+            "bg_secondary":     { "type": "string" },
+            "surface":          { "type": "string" },
+            "text":             { "type": "string" },
+            "text_muted":       { "type": "string" },
+            "accent":           { "type": "string" },
+            "accent_secondary": { "type": "string" },
+            "nav_bg":           { "type": "string" },
+            "border":           { "type": "string" }
+          },
+          "description": "Override any default color token."
+        },
+        "badges": {
+          "type": "object",
+          "description": "Override badge colors per category (keys match event/video category names).",
+          "additionalProperties": { "type": "string" }
+        },
+        "fonts": {
+          "type": "object",
+          "properties": {
+            "heading":         { "type": "string", "description": "Google Font family name for headings." },
+            "body":            { "type": "string", "description": "Google Font family name for body text." },
+            "heading_weights": { "type": "string", "description": "Semicolon-separated weights, e.g. '400;700;900'." },
+            "body_weights":    { "type": "string", "description": "Semicolon-separated weights, e.g. '300;400;600'." }
+          }
+        },
+        "hero": {
+          "type": "object",
+          "properties": {
+            "effect":             { "type": "string", "description": "Hero visual effect (e.g. 'spotlight', 'gradient', 'particles')." },
+            "tagline_separator":  { "type": "string", "description": "Character between tagline segments (default '|')." }
+          }
+        }
+      }
+    }
+  },
+
+  "type": "object",
+  "description": "A band package folder must contain at minimum band.json. Other files are optional but recommended.",
+  "properties": {
+    "folder_structure": {
+      "description": "Expected folder layout:",
+      "type": "string",
+      "const": "bands/<slug>/\n  band.json        (required)\n  members.json     (optional, array of member objects)\n  events.json      (optional, array of event objects)\n  videos.json      (optional, array of video objects)\n  albums.json      (optional, array of album objects)\n  theme.json       (optional, visual customization)\n  assets/\n    images/\n      members/\n      albums/\n      events/\n    logo.svg       (optional)\n    custom.css     (optional escape hatch)"
+    },
+    "band":    { "$ref": "#/definitions/band" },
+    "members": { "type": "array", "items": { "$ref": "#/definitions/member" } },
+    "events":  { "type": "array", "items": { "$ref": "#/definitions/event" } },
+    "albums":  { "type": "array", "items": { "$ref": "#/definitions/album" } },
+    "videos":  { "type": "array", "items": { "$ref": "#/definitions/video" } },
+    "theme":   { "$ref": "#/definitions/theme" }
+  }
+}

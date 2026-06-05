@@ -1,0 +1,39 @@
+{
+  "style": "Subliminal Autopsy",
+  "colors": {
+    "bg": "#111416",
+    "bg_secondary": "#181c1f",
+    "surface": "#1e2326",
+    "text": "#c8cdd0",
+    "text_muted": "#6b7780",
+    "accent": "#3dbfa0",
+    "accent_secondary": "#1a8f70",
+    "nav_bg": "#0c0e10",
+    "border": "rgba(61, 191, 160, 0.10)"
+  },
+  "badges": {
+    "formation": "#3dbfa0",
+    "album_release": "#1a8f70",
+    "lineup_change": "#4a8fa8",
+    "milestone": "#a0a832",
+    "controversy": "#bf3b3b",
+    "breakup": "#5a3d6b",
+    "reunion": "#4a9960",
+    "death": "#4a4a4a",
+    "other": "#555555",
+    "official": "#3dbfa0",
+    "live": "#1a8f70",
+    "interview": "#4a8fa8",
+    "documentary": "#666666"
+  },
+  "fonts": {
+    "heading": "Rajdhani",
+    "body": "IBM Plex Sans",
+    "heading_weights": "400;600;700",
+    "body_weights": "300;400;500"
+  },
+  "hero": {
+    "effect": "flatline-pulse",
+    "tagline_separator": "---"
+  }
+}

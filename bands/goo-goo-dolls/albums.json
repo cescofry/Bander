@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Jed",
+    "year": "1989",
+    "description": "The band's raw debut on Metal Blade Records, heavily influenced by The Replacements and punk rock, establishing their scrappy Buffalo identity.",
+    "cover_image": "assets/images/albums/jed.jpg"
+  },
+  {
+    "title": "Hold Me Up",
+    "year": "1990",
+    "description": "Their second album continued the punk-pop formula with tighter songwriting and energetic performances, gaining the band a loyal regional following.",
+    "cover_image": "assets/images/albums/hold-me-up.jpg"
+  },
+  {
+    "title": "Superstar Car Wash",
+    "year": "1993",
+    "description": "Their major-label debut on Warner Bros. marked the beginning of their transition from punk to alternative rock, featuring more polished production.",
+    "cover_image": "assets/images/albums/superstar-car-wash.jpg"
+  },
+  {
+    "title": "A Boy Named Goo",
+    "year": "1995",
+    "description": "The breakthrough album that went double platinum, driven by the hit single 'Name' which reached #5 on the Billboard Hot 100.",
+    "cover_image": "assets/images/albums/a-boy-named-goo.jpg"
+  },
+  {
+    "title": "Dizzy Up the Girl",
+    "year": "1998",
+    "description": "Their commercial peak, reaching quadruple platinum status with iconic singles 'Iris,' 'Slide,' 'Black Balloon,' and 'Broadway.'",
+    "cover_image": "assets/images/albums/dizzy-up-the-girl.jpg"
+  },
+  {
+    "title": "Gutterflower",
+    "year": "2002",
+    "description": "A platinum-selling album featuring 'Here Is Gone' and 'Sympathy,' maintaining the band's mainstream presence in the early 2000s.",
+    "cover_image": "assets/images/albums/gutterflower.jpg"
+  },
+  {
+    "title": "Let Love In",
+    "year": "2006",
+    "description": "Featured the hits 'Better Days,' 'Give a Little Bit,' and 'Stay with You,' showcasing Rzeznik's gift for anthemic, emotionally resonant rock.",
+    "cover_image": "assets/images/albums/let-love-in.jpg"
+  },
+  {
+    "title": "Something for the Rest of Us",
+    "year": "2010",
+    "description": "A darker, more introspective album exploring themes of resilience and hope in difficult times, with a more stripped-back production approach.",
+    "cover_image": "assets/images/albums/something-for-the-rest-of-us.jpg"
+  },
+  {
+    "title": "Magnetic",
+    "year": "2013",
+    "description": "A sonic departure featuring synth-driven production and electronic textures layered over the band's guitar-driven foundation.",
+    "cover_image": "assets/images/albums/magnetic.jpg"
+  },
+  {
+    "title": "Boxes",
+    "year": "2016",
+    "description": "Continued the band's modern production evolution with singles 'So Alive' and 'Over and Over,' exploring themes of identity and belonging.",
+    "cover_image": "assets/images/albums/boxes.jpg"
+  },
+  {
+    "title": "Miracle Pill",
+    "year": "2019",
+    "description": "The band's twelfth studio album blended anthemic rock with introspective ballads, demonstrating the continued evolution of Rzeznik's songwriting.",
+    "cover_image": "assets/images/albums/miracle-pill.jpg"
+  },
+  {
+    "title": "Chaos in Bloom",
+    "year": "2022",
+    "description": "Self-produced by Rzeznik for the first time, this album embraces a rawer, guitar-forward sound reminiscent of the band's earlier work.",
+    "cover_image": "assets/images/albums/chaos-in-bloom.jpg"
+  }
+]

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bander</title>
+  <meta name="description" content="Explore bands -- their music, history, and members.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link id="google-fonts" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="/app/assets/style.css">
+</head>
+<body>
+
+  <!-- ===== CATALOG VIEW (band list) ===== -->
+  <div id="catalog-view">
+    <header class="catalog-header">
+      <h1 class="catalog-title">BANDER</h1>
+      <p class="catalog-subtitle">Choose a band to explore</p>
+    </header>
+    <div id="band-list" class="band-grid">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+
+  <!-- ===== BAND VIEW (single band, hidden initially) ===== -->
+  <div id="band-view" class="hidden">
+
+    <!-- Sticky nav -->
+    <nav class="tab-nav" id="tabNav">
+      <div class="nav-inner">
+        <button class="nav-back" id="backBtn" title="Back to band list">&larr;</button>
+        <span class="nav-brand" id="navBrand"></span>
+        <div class="nav-tabs">
+          <button class="tab-btn active" data-tab="live">Live</button>
+          <button class="tab-btn" data-tab="band">The Band</button>
+          <button class="tab-btn" data-tab="chronology">Chronology</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero" id="hero">
+      <div class="hero-spotlight hero-spotlight--left"></div>
+      <div class="hero-spotlight hero-spotlight--right"></div>
+      <div class="hero-content">
+        <h1 class="hero-title" id="heroTitle"></h1>
+        <p class="hero-tagline" id="heroTagline"></p>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <span class="chevron"></span>
+      </div>
+    </header>
+
+    <!-- Sections (stacked single-page layout) -->
+    <main>
+      <section class="page-section" id="panel-live">
+        <h2 class="section-title reveal">Live</h2>
+        <div class="video-grid" id="videoGrid"></div>
+      </section>
+
+      <section class="page-section" id="panel-band">
+        <h2 class="section-title reveal">The Band</h2>
+        <div class="members-container" id="membersContainer"></div>
+      </section>
+
+      <section class="page-section" id="panel-chronology">
+        <h2 class="section-title reveal">Chronology</h2>
+        <div class="timeline" id="timeline"></div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="siteFooter">
+      <h3>Did you know?</h3>
+      <ul class="trivia-list" id="triviaList"></ul>
+      <p class="footer-copy">&copy; Fan tribute site. Not affiliated with the band or their management.</p>
+    </footer>
+  </div>
+
+  <script src="/app/assets/app.js"></script>
+</body>
+</html>
