@@ -18,9 +18,18 @@
     <header class="catalog-header">
       <h1 class="catalog-title">BANDER</h1>
       <p class="catalog-subtitle">Choose a band to explore</p>
+      <div class="catalog-search-wrap">
+        <input type="text" id="catalogSearch" class="catalog-search" placeholder="Search bands..." autocomplete="off" spellcheck="false">
+      </div>
     </header>
     <div id="band-list" class="band-grid">
       <!-- Populated by JS -->
+    </div>
+    <!-- Request card shown when search has no matches -->
+    <div id="request-card" class="request-card hidden">
+      <h2 class="request-card-title">Band not found</h2>
+      <p class="request-card-text" id="requestCardText">Can't find what you're looking for?</p>
+      <a id="requestCardLink" class="request-card-btn" href="#" target="_blank" rel="noopener">Request this band on GitHub</a>
     </div>
   </div>
 

@@ -22,6 +22,8 @@
   let currentBand = null;   // loaded band data
   let currentSlug = null;   // slug for asset paths
   let revealObserver = null;
+  let allBands = [];        // full catalog for client-side filtering
+  let searchQuery = '';     // current search text
 
   // -----------------------------------------------------------------
   // DOM refs
@@ -39,6 +41,10 @@
   const triviaList       = document.getElementById('triviaList');
   const tabButtons       = document.querySelectorAll('.tab-btn');
   const pageSections     = document.querySelectorAll('.page-section');
+  const catalogSearch    = document.getElementById('catalogSearch');
+  const requestCard      = document.getElementById('request-card');
+  const requestCardText  = document.getElementById('requestCardText');
+  const requestCardLink  = document.getElementById('requestCardLink');
 
   // -----------------------------------------------------------------
   // Routing (hash-based)
@@ -70,16 +76,80 @@
   async function loadCatalog() {
     try {
       var res = await fetch('/api/bands');
-      var bands = await res.json();
-      renderCatalog(bands);
+      allBands = await res.json();
+      applySearch();
     } catch (err) {
       bandList.innerHTML = '<p class="error">Failed to load bands.</p>';
     }
   }
 
+  // -----------------------------------------------------------------
+  // Search & filter
+  // -----------------------------------------------------------------
+  function applySearch() {
+    var query = searchQuery.trim().toLowerCase();
+    var filtered = allBands;
+
+    if (query) {
+      filtered = allBands.filter(function (b) {
+        var haystack = [
+          b.name || '',
+          (b.genres || []).join(' '),
+          b.origin || '',
+          b.description || ''
+        ].join(' ').toLowerCase();
+        return haystack.indexOf(query) !== -1;
+      });
+    }
+
+    renderCatalog(filtered);
+    updateRequestCard(query, filtered.length);
+  }
+
+  function updateRequestCard(query, matchCount) {
+    if (!query || matchCount > 0) {
+      requestCard.classList.add('hidden');
+      return;
+    }
+
+    // Capitalize the query for display
+    var displayName = searchQuery.trim().replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+
+    requestCardText.textContent = "Can\u2019t find \u201c" + displayName + "\u201d in the catalog.";
+
+    var issueTitle = 'Band request: ' + displayName;
+    var issueBody =
+      '## Requested band\n' +
+      displayName + '\n\n' +
+      '## Why this band should be added\n' +
+      '<!-- Tell us why you\u2019d like to see this band on Bander -->\n\n' +
+      '## Useful links or sources\n' +
+      '<!-- Wikipedia, YouTube channels, official sites, etc. -->\n\n' +
+      '## Additional notes\n' +
+      '<!-- Anything else: specific albums, eras, live footage, etc. -->\n';
+
+    var issueUrl = 'https://github.com/cescofry/Bander/issues/new'
+      + '?title=' + encodeURIComponent(issueTitle)
+      + '&body=' + encodeURIComponent(issueBody)
+      + '&labels=' + encodeURIComponent('band-request');
+
+    requestCardLink.href = issueUrl;
+    requestCardLink.textContent = 'Request \u201c' + esc(displayName) + '\u201d on GitHub';
+    requestCard.classList.remove('hidden');
+  }
+
+  catalogSearch.addEventListener('input', function () {
+    searchQuery = this.value;
+    applySearch();
+  });
+
   function renderCatalog(bands) {
-    if (!bands.length) {
+    if (!bands.length && !searchQuery.trim()) {
       bandList.innerHTML = '<p class="empty">No bands found. Run the skill to add one.</p>';
+      return;
+    }
+    if (!bands.length) {
+      bandList.innerHTML = '';
       return;
     }
     bandList.innerHTML = bands.map(function (b) {
