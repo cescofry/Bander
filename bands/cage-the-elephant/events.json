@@ -1,0 +1,162 @@
+[
+  {
+    "date": "2006",
+    "title": "Band Formation in Bowling Green",
+    "description": "Cage the Elephant forms in Bowling Green, Kentucky, with Matt Shultz on vocals, Brad Shultz on guitar, Lincoln Parish on lead guitar, Daniel Tichenor on bass, and Jared Champion on drums. The band's name came from a mentally disabled man who kept repeating 'You have to cage the elephant' to Matt after a show.",
+    "category": "formation",
+    "image": null,
+    "members_involved": ["Matt Shultz", "Brad Shultz", "Lincoln Parish", "Daniel Tichenor", "Jared Champion"]
+  },
+  {
+    "date": "2007",
+    "title": "SXSW Showcase and Record Deal",
+    "description": "The band signs with Relentless Records after showcasing at the 2007 South by Southwest music festival. Their first tour is as a support act for Queens of the Stone Age in Canada.",
+    "category": "milestone",
+    "image": null,
+    "members_involved": ["Matt Shultz", "Brad Shultz", "Lincoln Parish", "Daniel Tichenor", "Jared Champion"]
+  },
+  {
+    "date": "2008",
+    "title": "Move to London and UK Debut Album Release",
+    "description": "The band relocates to London's Leyton area, with 16-year-old Lincoln Parish's parents signing over guardianship. They appear on Later... with Jools Holland alongside Coldplay and Sia, and release their self-titled debut album in the UK on June 23, 2008.",
+    "category": "milestone",
+    "image": null,
+    "members_involved": ["Matt Shultz", "Brad Shultz", "Lincoln Parish", "Daniel Tichenor", "Jared Champion"]
+  },
+  {
+    "date": "2008-06-23",
+    "title": "Cage the Elephant (Debut Album)",
+    "description": "The band's self-titled debut album is released, featuring the breakout hit 'Ain't No Rest for the Wicked' which reaches #83 on the Billboard Hot 100 and is later featured in the video game Borderlands. The album is eventually certified Platinum by the RIAA.",
+    "category": "album_release",
+    "image": "assets/images/albums/cage-the-elephant.jpg",
+    "members_involved": ["Matt Shultz", "Brad Shultz", "Lincoln Parish", "Daniel Tichenor", "Jared Champion"]
+  },
+  {
+    "date": "2009-08-30",
+    "title": "Outside Lands at Golden Gate Park",
+    "description": "Cage the Elephant performs at San Francisco's Outside Lands Music and Arts Festival in Golden Gate Park, part of an explosive year that also included their first Lollapalooza appearance in Chicago and a national TV spot on Late Show with David Letterman.",
+    "category": "milestone",
+    "image": null,
+    "members_involved": ["Matt Shultz", "Brad Shultz", "Lincoln Parish", "Daniel Tichenor", "Jared Champion"]
+  },
+  {
+    "date": "2011-01-11",
+    "title": "Thank You, Happy Birthday",
+    "description": "The band's punk-influenced second album debuts at #2 on the Billboard 200. 'Shake Me Down' dominates the alternative charts at #1 for six weeks. The album is heavily influenced by Pixies and Nirvana and is certified Gold.",
+    "category": "album_release",
+    "image": "assets/images/albums/thank-you-happy-birthday.jpg",
+    "members_involved": ["Matt Shultz", "Brad Shultz", "Lincoln Parish", "Daniel Tichenor", "Jared Champion"]
+  },
+  {
+    "date": "2011-10",
+    "title": "Dave Grohl Fills In on Drums",
+    "description": "During a tour supporting Foo Fighters, Jared Champion's appendix suddenly bursts, requiring emergency medical attention. Foo Fighters frontman Dave Grohl temporarily fills in on drums while Champion recovers.",
+    "category": "milestone",
+    "image": null,
+    "members_involved": ["Jared Champion"]
+  },
+  {
+    "date": "2013-10-08",
+    "title": "Melophobia",
+    "description": "The band's third album (its name meaning 'fear of music') marks a concerted effort to find their own distinct identity. It debuts at #15 on the Billboard 200 and spawns the #1 alternative hits 'Come a Little Closer' and 'Cigarette Daydreams.' The album is certified Platinum.",
+    "category": "album_release",
+    "image": "assets/images/albums/melophobia.jpg",
+    "members_involved": ["Matt Shultz", "Brad Shultz", "Lincoln Parish", "Daniel Tichenor", "Jared Champion"]
+  },
+  {
+    "date": "2013-12",
+    "title": "Lincoln Parish Departs",
+    "description": "Lead guitarist Lincoln Parish leaves the band on good terms to focus on his production company, TalkBoxRodeo. Nick Bockrath fills in on lead guitar starting with a Jimmy Kimmel Live! appearance on December 9.",
+    "category": "lineup_change",
+    "image": null,
+    "members_involved": ["Lincoln Parish", "Nick Bockrath"]
+  },
+  {
+    "date": "2015-02-08",
+    "title": "First Grammy Nomination",
+    "description": "Melophobia earns Cage the Elephant their first Grammy nomination for Best Alternative Music Album at the 57th Annual Grammy Awards.",
+    "category": "milestone",
+    "image": null,
+    "members_involved": ["Matt Shultz", "Brad Shultz", "Nick Bockrath", "Daniel Tichenor", "Jared Champion"]
+  },
+  {
+    "date": "2015-12-18",
+    "title": "Tell Me I'm Pretty",
+    "description": "Produced by Dan Auerbach of The Black Keys, the band's fourth album reaches further into a vintage 1960s psychedelic sound. Singles 'Mess Around' and 'Trouble' both hit #1 on alternative airplay. The album is certified Gold.",
+    "category": "album_release",
+    "image": "assets/images/albums/tell-me-im-pretty.jpg",
+    "members_involved": ["Matt Shultz", "Brad Shultz", "Nick Bockrath", "Matthan Minster", "Daniel Tichenor", "Jared Champion"]
+  },
+  {
+    "date": "2016-02-07",
+    "title": "Opening for Metallica at Super Bowl Eve",
+    "description": "Cage the Elephant opens for Metallica at a Super Bowl eve concert at AT&T Park (now Oracle Park) in San Francisco, marking one of their biggest stage moments.",
+    "category": "milestone",
+    "image": null,
+    "members_involved": ["Matt Shultz", "Brad Shultz", "Nick Bockrath", "Matthan Minster", "Daniel Tichenor", "Jared Champion"]
+  },
+  {
+    "date": "2017-02-12",
+    "title": "First Grammy Win: Best Rock Album",
+    "description": "Tell Me I'm Pretty wins Best Rock Album at the 59th Annual Grammy Awards, marking the band's first Grammy victory.",
+    "category": "milestone",
+    "image": null,
+    "members_involved": ["Matt Shultz", "Brad Shultz", "Nick Bockrath", "Matthan Minster", "Daniel Tichenor", "Jared Champion"]
+  },
+  {
+    "date": "2017",
+    "title": "Nick Bockrath and Matthan Minster Join as Full Members",
+    "description": "Nick Bockrath (lead guitar) and Matthan Minster (keyboards, rhythm guitar) officially become full-time members of Cage the Elephant, solidifying the six-piece lineup.",
+    "category": "lineup_change",
+    "image": null,
+    "members_involved": ["Nick Bockrath", "Matthan Minster"]
+  },
+  {
+    "date": "2019-04-19",
+    "title": "Social Cues",
+    "description": "The band's fifth album is heavily influenced by Matt Shultz's divorce and the deaths of close friends, resulting in one of their darkest and most personal records. It debuts at #21 on the Billboard 200, charts in 11 countries, and spawns three #1 alternative hits. Rolling Stone calls it 'their best album yet.'",
+    "category": "album_release",
+    "image": "assets/images/albums/social-cues.jpg",
+    "members_involved": ["Matt Shultz", "Brad Shultz", "Nick Bockrath", "Matthan Minster", "Daniel Tichenor", "Jared Champion"]
+  },
+  {
+    "date": "2020-01-26",
+    "title": "Second Grammy Win: Best Rock Album",
+    "description": "Social Cues wins Best Rock Album at the 62nd Annual Grammy Awards, making Cage the Elephant two-time Grammy winners in the same category.",
+    "category": "milestone",
+    "image": null,
+    "members_involved": ["Matt Shultz", "Brad Shultz", "Nick Bockrath", "Matthan Minster", "Daniel Tichenor", "Jared Champion"]
+  },
+  {
+    "date": "2022",
+    "title": "Matt Shultz's Mental Health Crisis",
+    "description": "Frontman Matt Shultz experiences a severe mental health crisis triggered by an adverse reaction to prescribed ADHD medication, leading to paranoid delusions and a break from reality. The band's touring activity comes to a near halt.",
+    "category": "controversy",
+    "image": null,
+    "members_involved": ["Matt Shultz"]
+  },
+  {
+    "date": "2024-05-17",
+    "title": "Neon Pill",
+    "description": "After five years without new music and Shultz's recovery, the band releases their sixth studio album. Its lyrics explore Shultz's psychosis and recovery. Three singles reach #1 on Alternative Airplay, bringing the band's total to 13. The subsequent tour becomes their highest-grossing ever, generating $25 million.",
+    "category": "album_release",
+    "image": "assets/images/albums/neon-pill.jpg",
+    "members_involved": ["Matt Shultz", "Brad Shultz", "Nick Bockrath", "Matthan Minster", "Daniel Tichenor", "Jared Champion"]
+  },
+  {
+    "date": "2024",
+    "title": "Cigarette Daydreams Hits 1 Billion Spotify Streams",
+    "description": "The 2013 single 'Cigarette Daydreams' becomes Cage the Elephant's first song to reach 1 billion streams on Spotify, cementing its status as a generational anthem.",
+    "category": "milestone",
+    "image": null,
+    "members_involved": ["Matt Shultz", "Brad Shultz"]
+  },
+  {
+    "date": "2025",
+    "title": "Opening for Oasis Reunion Tour",
+    "description": "Cage the Elephant opens for all North American dates of the Oasis Live '25 reunion tour from late August to early September 2025, followed by their own headlining North American fall tour.",
+    "category": "milestone",
+    "image": null,
+    "members_involved": ["Matt Shultz", "Brad Shultz", "Nick Bockrath", "Matthan Minster", "Daniel Tichenor", "Jared Champion"]
+  }
+]

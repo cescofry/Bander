@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Cage the Elephant",
+    "year": "2008",
+    "description": "The band's self-titled debut blends garage rock, punk, and blues into a raw, energetic debut. Spawned the breakout hit 'Ain't No Rest for the Wicked' (8x Platinum) and 'Back Against the Wall,' their first #1 alternative hit. Certified Platinum.",
+    "cover_image": "assets/images/albums/cage-the-elephant.jpg"
+  },
+  {
+    "title": "Thank You, Happy Birthday",
+    "year": "2011",
+    "description": "A punk-infused sophomore album that debuted at #2 on the Billboard 200. Heavily influenced by Pixies and Nirvana, it features 'Shake Me Down' which topped the alternative charts for six weeks. Certified Gold.",
+    "cover_image": "assets/images/albums/thank-you-happy-birthday.jpg"
+  },
+  {
+    "title": "Melophobia",
+    "year": "2013",
+    "description": "Named after the fear of music, this third album marked the band's evolution beyond garage rock into darker, more psychedelic territory. Features the 5x Platinum 'Cigarette Daydreams' and #1 hit 'Come a Little Closer.' Nominated for Best Alternative Music Album at the Grammys. Certified Platinum.",
+    "cover_image": "assets/images/albums/melophobia.jpg"
+  },
+  {
+    "title": "Tell Me I'm Pretty",
+    "year": "2015",
+    "description": "Produced by Dan Auerbach of The Black Keys, this album pushes into vintage 1960s psychedelia. Won the Grammy Award for Best Rock Album in 2017, marking the band's first Grammy win. Certified Gold.",
+    "cover_image": "assets/images/albums/tell-me-im-pretty.jpg"
+  },
+  {
+    "title": "Social Cues",
+    "year": "2019",
+    "description": "The band's darkest and most personal record, shaped by Matt Shultz's divorce and the deaths of close friends. Won their second Grammy for Best Rock Album in 2020. Features collaborations with Beck ('Night Running') and Iggy Pop ('Broken Boy').",
+    "cover_image": "assets/images/albums/social-cues.jpg"
+  },
+  {
+    "title": "Neon Pill",
+    "year": "2024",
+    "description": "Released after a five-year gap and Shultz's recovery from a mental health crisis, this sixth album explores themes of psychosis, addiction, and resilience. Three singles reached #1 on Alternative Airplay, and the supporting tour became their highest-grossing ever at $25 million.",
+    "cover_image": "assets/images/albums/neon-pill.jpg"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Matt Shultz",
+    "role": "Lead Vocals, Rhythm Guitar",
+    "active_period": "2006-present",
+    "bio": "Matt Shultz is the charismatic frontman of Cage the Elephant, known for his electrifying stage presence often compared to Mick Jagger. His intensely personal lyrics have driven the band's evolution from garage rock to psychedelic alternative, with albums like Social Cues channeling his divorce and Neon Pill exploring his recovery from a mental health crisis. Before music, he worked as a plumber in construction.",
+    "side_projects": [],
+    "images": ["assets/images/members/matt-shultz.jpg"]
+  },
+  {
+    "name": "Brad Shultz",
+    "role": "Rhythm Guitar, Keyboards",
+    "active_period": "2006-present",
+    "bio": "Brad Shultz co-founded Cage the Elephant with his younger brother Matt and has been the band's rhythmic backbone since their formation. His guitar work provides the driving foundation for the band's genre-shifting sound, from the raw garage rock of their debut to the polished psychedelia of Tell Me I'm Pretty. He previously worked in telemarketing before pursuing music full-time.",
+    "side_projects": [],
+    "images": ["assets/images/members/brad-shultz.jpg"]
+  },
+  {
+    "name": "Daniel Tichenor",
+    "role": "Bass, Backing Vocals",
+    "active_period": "2006-present",
+    "bio": "Daniel Tichenor has been the band's bassist since their formation, providing the low-end groove that anchors Cage the Elephant's diverse sonic palette. His bass lines range from punk-fueled aggression to smooth psychedelic grooves, adapting seamlessly across the band's evolving sound. Before joining the band, he worked at Lowe's.",
+    "side_projects": [],
+    "images": ["assets/images/members/daniel-tichenor.jpg"]
+  },
+  {
+    "name": "Jared Champion",
+    "role": "Drums, Percussion",
+    "active_period": "2006-present",
+    "bio": "Jared Champion is the driving percussive force behind Cage the Elephant, known for his dynamic drumming that shifts between punk energy and nuanced rhythmic textures. He memorably had his appendix burst during a 2011 tour with Foo Fighters, with Dave Grohl temporarily filling in for him. Before music, he worked in a pet store.",
+    "side_projects": [],
+    "images": ["assets/images/members/jared-champion.jpg"]
+  },
+  {
+    "name": "Nick Bockrath",
+    "role": "Lead Guitar, Keyboards, Backing Vocals",
+    "active_period": "2013-present",
+    "bio": "Nick Bockrath originally filled in on lead guitar after Lincoln Parish's departure in December 2013 and became a full-time member by 2017. Previously a bassist for Morning Teleportation and a member of Nicos Gun, he brought a fresh perspective to the band's guitar sound that helped shape the more atmospheric textures of Tell Me I'm Pretty and Social Cues.",
+    "side_projects": ["Morning Teleportation", "Nicos Gun"],
+    "images": ["assets/images/members/nick-bockrath.jpg"]
+  },
+  {
+    "name": "Matthan Minster",
+    "role": "Keyboards, Rhythm Guitar, Backing Vocals",
+    "active_period": "2017-present",
+    "bio": "Matthan Minster joined Cage the Elephant as a full-time member in 2017, adding layers of keyboards and additional guitar to the band's increasingly textured sound. He had previously formed a band called YOURS in 2010. His multi-instrumental versatility has been key to realizing the band's more ambitious arrangements on Social Cues and Neon Pill.",
+    "side_projects": ["YOURS"],
+    "images": ["assets/images/members/matthan-minster.jpg"]
+  },
+  {
+    "name": "Lincoln Parish",
+    "role": "Lead Guitar, Keyboards",
+    "active_period": "2006-2013",
+    "bio": "Lincoln Parish was Cage the Elephant's original lead guitarist, joining as a teenager and having his parents sign over guardianship so he could move to London with the band at just 16 years old. His guitar work defined the band's sound across their first three albums before he departed in December 2013 to pursue his passion for music production through his company TalkBoxRodeo.",
+    "side_projects": ["TalkBoxRodeo (production company)"],
+    "images": ["assets/images/members/lincoln-parish.jpg"]
+  }
+]

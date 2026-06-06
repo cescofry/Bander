@@ -1,0 +1,39 @@
+{
+  "style": "Bowling Green Burnout",
+  "colors": {
+    "bg": "#1a1410",
+    "bg_secondary": "#231c14",
+    "surface": "#2d241a",
+    "text": "#e8ddd0",
+    "text_muted": "#a09080",
+    "accent": "#d4762c",
+    "accent_secondary": "#c4a35a",
+    "nav_bg": "#151008",
+    "border": "#3d3228"
+  },
+  "badges": {
+    "formation": "#d4762c",
+    "album_release": "#c4a35a",
+    "lineup_change": "#8b6b4a",
+    "milestone": "#d49e2c",
+    "controversy": "#b84a2c",
+    "breakup": "#6b4a3a",
+    "reunion": "#5a8b4a",
+    "death": "#4a3a3a",
+    "other": "#7a6a5a",
+    "official": "#d4762c",
+    "live": "#c4a35a",
+    "interview": "#8b6b4a",
+    "documentary": "#a0805a"
+  },
+  "fonts": {
+    "heading": "Oswald",
+    "body": "Source Sans 3",
+    "heading_weights": "400;700",
+    "body_weights": "300;400;600"
+  },
+  "hero": {
+    "effect": "embers",
+    "tagline_separator": "//"
+  }
+}
