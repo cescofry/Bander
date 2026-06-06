@@ -1,0 +1,170 @@
+[
+  {
+    "date": "1984",
+    "title": "Sepultura Formed in Belo Horizonte",
+    "description": "Brothers Max (14) and Igor (13) Cavalera form Sepultura in Belo Horizonte, Brazil, after the death of their father. The name means 'grave' in Portuguese, inspired by a Motorhead song.",
+    "category": "formation",
+    "image": null,
+    "members_involved": ["Max Cavalera", "Igor Cavalera"]
+  },
+  {
+    "date": "1986",
+    "title": "Morbid Visions Released",
+    "description": "Sepultura releases their debut album Morbid Visions on Cogumelo Records, a raw death/black metal assault heavily influenced by Venom, Celtic Frost, and Slayer. Contains the early fan favorite 'Troops of Doom.'",
+    "category": "album_release",
+    "image": "assets/images/albums/morbid-visions.jpg",
+    "members_involved": ["Max Cavalera", "Igor Cavalera", "Jairo Guedz", "Paulo Jr."]
+  },
+  {
+    "date": "1987",
+    "title": "Andreas Kisser Joins; Schizophrenia Released",
+    "description": "Andreas Kisser replaces Jairo Guedz on lead guitar, dramatically improving the band's technical ability. The resulting album Schizophrenia catches the attention of Roadrunner Records, who sign the band in 1988.",
+    "category": "lineup_change",
+    "image": "assets/images/albums/schizophrenia.jpg",
+    "members_involved": ["Andreas Kisser", "Jairo Guedz"]
+  },
+  {
+    "date": "1989",
+    "title": "Beneath the Remains -- International Breakthrough",
+    "description": "The band's Roadrunner debut, produced by Scott Burns in Rio de Janeiro, becomes an international thrash metal landmark. Terrorizer names it one of the top 20 thrash metal albums of all time.",
+    "category": "album_release",
+    "image": "assets/images/albums/beneath-the-remains.jpg",
+    "members_involved": ["Max Cavalera", "Igor Cavalera", "Andreas Kisser", "Paulo Jr."]
+  },
+  {
+    "date": "1991",
+    "title": "Arise Charts in the US",
+    "description": "Recorded at Morrisound Studios in Tampa, Florida, Arise becomes Sepultura's first album to chart in the US at No. 119 on the Billboard 200. MTV bans the title track video due to apocalyptic religious imagery.",
+    "category": "album_release",
+    "image": "assets/images/albums/arise.jpg",
+    "members_involved": ["Max Cavalera", "Igor Cavalera", "Andreas Kisser", "Paulo Jr."]
+  },
+  {
+    "date": "1993",
+    "title": "Chaos A.D. Goes Gold",
+    "description": "Sepultura pivots toward groove metal with Chaos A.D., which is certified Gold by the RIAA. AllMusic calls it 'one of the greatest heavy metal albums of all time.' The band tours with Pantera and Fear Factory.",
+    "category": "album_release",
+    "image": "assets/images/albums/chaos-ad.jpg",
+    "members_involved": ["Max Cavalera", "Igor Cavalera", "Andreas Kisser", "Paulo Jr."]
+  },
+  {
+    "date": "1996-02-20",
+    "title": "Roots Redefines Heavy Metal",
+    "description": "The band's best-selling album debuts at No. 27 on Billboard 200, fusing groove metal with Brazilian indigenous music recorded with the Xavante people. Widely credited as a major influence on nu metal.",
+    "category": "album_release",
+    "image": "assets/images/albums/roots.jpg",
+    "members_involved": ["Max Cavalera", "Igor Cavalera", "Andreas Kisser", "Paulo Jr."]
+  },
+  {
+    "date": "1996-08",
+    "title": "Max Cavalera's Stepson Killed",
+    "description": "Dana Wells, Max Cavalera's stepson and the band's road manager, is killed in a car accident. The tragedy and subsequent management disputes lead to Max's departure from the band.",
+    "category": "other",
+    "image": null,
+    "members_involved": ["Max Cavalera"]
+  },
+  {
+    "date": "1997-01",
+    "title": "Max Cavalera Departs Sepultura",
+    "description": "Max Cavalera leaves Sepultura after a bitter dispute over management involving his wife Gloria Bujnowski. The split divides the metal community and the Cavalera brothers do not speak for years.",
+    "category": "lineup_change",
+    "image": null,
+    "members_involved": ["Max Cavalera"]
+  },
+  {
+    "date": "1998",
+    "title": "Derrick Green Era Begins with Against",
+    "description": "American vocalist Derrick Green is chosen as Max's replacement after auditions that included Chuck Billy and Phil Demmel. The album Against marks the beginning of a new chapter for Sepultura.",
+    "category": "lineup_change",
+    "image": "assets/images/albums/against.jpg",
+    "members_involved": ["Derrick Green"]
+  },
+  {
+    "date": "2001",
+    "title": "Nation Released; End of Roadrunner Era",
+    "description": "Nation is Sepultura's final album with Roadrunner Records. Despite poor sales, the band pushes forward with an ambitious conceptual theme of building a 'Sepulnation.'",
+    "category": "album_release",
+    "image": "assets/images/albums/nation.jpg",
+    "members_involved": ["Derrick Green", "Igor Cavalera", "Andreas Kisser", "Paulo Jr."]
+  },
+  {
+    "date": "2003",
+    "title": "Roorback -- Critical Comeback on SPV",
+    "description": "Moving to SPV Records, Roorback receives greater critical acclaim than its predecessors. AllMusic gives it 4/5, stating it 'should put to rest for good' any doubts about the Green/Sepultura match.",
+    "category": "album_release",
+    "image": "assets/images/albums/roorback.jpg",
+    "members_involved": ["Derrick Green", "Igor Cavalera", "Andreas Kisser", "Paulo Jr."]
+  },
+  {
+    "date": "2006",
+    "title": "Igor Cavalera Departs; Last Original Cavalera Gone",
+    "description": "Igor Cavalera, the last founding member besides Paulo Jr., leaves Sepultura citing 'artistic incompatibility.' His departure after the Dante XXI album cycle ends the Cavalera era entirely.",
+    "category": "lineup_change",
+    "image": null,
+    "members_involved": ["Igor Cavalera"]
+  },
+  {
+    "date": "2006",
+    "title": "Dante XXI -- Concept Album Based on The Divine Comedy",
+    "description": "A concept album based on Dante Alighieri's Divine Comedy, Dante XXI is the last Sepultura album to feature Igor Cavalera. AllMusic calls it 'easily one of Sepultura's strongest releases to feature Green on vocals.'",
+    "category": "album_release",
+    "image": "assets/images/albums/dante-xxi.jpg",
+    "members_involved": ["Derrick Green", "Igor Cavalera", "Andreas Kisser", "Paulo Jr."]
+  },
+  {
+    "date": "2009",
+    "title": "A-Lex -- First Album Without a Cavalera",
+    "description": "Based on A Clockwork Orange, A-Lex is the first Sepultura album without either Cavalera brother. Despite the personnel changes, AllMusic gives it 4/5 praising the band's continued vitality.",
+    "category": "album_release",
+    "image": "assets/images/albums/a-lex.jpg",
+    "members_involved": ["Derrick Green", "Andreas Kisser", "Paulo Jr."]
+  },
+  {
+    "date": "2011",
+    "title": "Kairos -- New Drummer, New Label",
+    "description": "Eloy Casagrande joins on drums and the band signs with Nuclear Blast Records. Kairos marks a return to the classic Sepultura logo and signals a creative reinvigoration.",
+    "category": "album_release",
+    "image": "assets/images/albums/kairos.jpg",
+    "members_involved": ["Derrick Green", "Andreas Kisser", "Paulo Jr.", "Eloy Casagrande"]
+  },
+  {
+    "date": "2013",
+    "title": "The Mediator Between Head and Hands Must Be the Heart",
+    "description": "Loosely based on Fritz Lang's 1927 film Metropolis, this album continues the band's tradition of conceptual themes. Features the single 'The Age of the Atheist.'",
+    "category": "album_release",
+    "image": "assets/images/albums/the-mediator.jpg",
+    "members_involved": ["Derrick Green", "Andreas Kisser", "Paulo Jr.", "Eloy Casagrande"]
+  },
+  {
+    "date": "2017",
+    "title": "Machine Messiah Adds Progressive Elements",
+    "description": "Incorporating progressive rock alongside thrash and groove metal, Machine Messiah reaches No. 27 in Germany and No. 9 on the UK Rock chart. Receives positive reviews for its musical ambition.",
+    "category": "album_release",
+    "image": "assets/images/albums/machine-messiah.jpg",
+    "members_involved": ["Derrick Green", "Andreas Kisser", "Paulo Jr.", "Eloy Casagrande"]
+  },
+  {
+    "date": "2020-02-07",
+    "title": "Quadra -- Final Studio Album",
+    "description": "Sepultura's fifteenth and final studio album debuts at No. 5 in Germany and No. 5 on the UK Rock chart, their highest positions in years. Named after the Quadra neighborhood in Belo Horizonte.",
+    "category": "album_release",
+    "image": "assets/images/albums/quadra.jpg",
+    "members_involved": ["Derrick Green", "Andreas Kisser", "Paulo Jr.", "Eloy Casagrande"]
+  },
+  {
+    "date": "2024-03",
+    "title": "Farewell Tour Begins",
+    "description": "Sepultura announces a two-year farewell tour to close out the band's four-decade career. Greyson Nekrutman replaces Eloy Casagrande on drums for the final run.",
+    "category": "other",
+    "image": null,
+    "members_involved": ["Derrick Green", "Andreas Kisser", "Paulo Jr.", "Greyson Nekrutman"]
+  },
+  {
+    "date": "2026",
+    "title": "Sepultura Concludes -- The Cloud of Unknowing EP",
+    "description": "Sepultura releases their final recording, The Cloud of Unknowing EP, during the farewell tour. After 42 years, one of the most influential metal bands in history takes their final bow.",
+    "category": "breakup",
+    "image": null,
+    "members_involved": ["Derrick Green", "Andreas Kisser", "Paulo Jr.", "Greyson Nekrutman"]
+  }
+]

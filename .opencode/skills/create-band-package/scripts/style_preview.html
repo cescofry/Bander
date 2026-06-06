@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Choose Visual Direction</title>
+<style>
+  :root {
+    --ui-bg: #1a1a2e;
+    --ui-text: #e0e0e0;
+    --ui-accent: #6c63ff;
+    --ui-border: #333;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--ui-bg);
+    color: var(--ui-text);
+    min-height: 100vh;
+  }
+
+  /* -- Header -- */
+  .header {
+    text-align: center;
+    padding: 2.5rem 1rem 1rem;
+  }
+  .header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .header p {
+    color: #999;
+    font-size: 0.95rem;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .header .band-name {
+    color: var(--ui-accent);
+    font-weight: 700;
+  }
+  .analysis-summary {
+    max-width: 640px;
+    margin: 1rem auto 0;
+    padding: 1rem 1.25rem;
+    background: rgba(108, 99, 255, 0.08);
+    border: 1px solid rgba(108, 99, 255, 0.2);
+    border-radius: 8px;
+    font-size: 0.88rem;
+    color: #bbb;
+    line-height: 1.5;
+  }
+
+  /* -- Tab Nav -- */
+  .style-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    border-bottom: 2px solid var(--ui-border);
+    margin: 1.5rem auto 0;
+    max-width: 900px;
+    overflow-x: auto;
+  }
+  .style-tab-btn {
+    padding: 0.9rem 1.6rem;
+    background: transparent;
+    border: none;
+    color: #888;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+    white-space: nowrap;
+    position: relative;
+  }
+  .style-tab-btn:hover { color: #ccc; }
+  .style-tab-btn.active {
+    color: #fff;
+    border-bottom-color: var(--ui-accent);
+  }
+  .style-tab-btn .rec-badge {
+    display: inline-block;
+    background: var(--ui-accent);
+    color: #fff;
+    font-size: 0.6rem;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* -- Preview Panels -- */
+  .style-panel { display: none; }
+  .style-panel.active { display: block; }
+
+  .preview-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  /* Rationale card */
+  .rationale {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #aaa;
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  /* Shared preview layout */
+  .preview-box {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  }
+  .preview-hero {
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  .preview-hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .preview-hero p {
+    font-size: 1rem;
+    opacity: 0.8;
+  }
+
+  .preview-body {
+    padding: 2rem;
+  }
+  .preview-body h3 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .preview-timeline {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .preview-timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    border-radius: 2px;
+  }
+  .preview-event {
+    position: relative;
+    margin-bottom: 1.2rem;
+    padding-left: 1rem;
+  }
+  .preview-event::before {
+    content: '';
+    position: absolute;
+    left: -1.65rem;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  .preview-event .ev-date {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.15rem;
+  }
+  .preview-event .ev-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .preview-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .preview-card {
+    border-radius: 8px;
+    padding: 1.2rem;
+    text-align: center;
+  }
+  .preview-card .card-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .preview-card .card-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .preview-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+    opacity: 0.6;
+  }
+
+  /* -- Choose Button -- */
+  .choose-row {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  .choose-btn {
+    padding: 0.9rem 2.5rem;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .choose-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+  .choose-btn:active { transform: translateY(0); }
+
+  /* -- Confirmation overlay -- */
+  .confirm-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+  }
+  .confirm-overlay.visible {
+    display: flex;
+  }
+  .confirm-box {
+    background: #222;
+    border-radius: 16px;
+    padding: 3rem;
+    text-align: center;
+    max-width: 480px;
+  }
+  .confirm-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #4caf50;
+  }
+  .confirm-box p {
+    color: #aaa;
+    margin-bottom: 0.3rem;
+  }
+
+  @media (max-width: 600px) {
+    .preview-cards { grid-template-columns: 1fr; }
+    .style-tab-btn { padding: 0.7rem 1rem; font-size: 0.8rem; }
+    .preview-hero h2 { font-size: 1.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Choose a Visual Direction</h1>
+  <p>These concepts were designed for <span class="band-name" id="bandName">the band</span>. Preview each one, then click the button to confirm your choice.</p>
+  <div class="analysis-summary" id="analysisSummary"></div>
+</div>
+
+<nav class="style-tabs" id="styleTabs"></nav>
+
+<div id="panelsContainer"></div>
+
+<!-- Confirmation Overlay -->
+<div class="confirm-overlay" id="confirmOverlay">
+  <div class="confirm-box">
+    <h2>Style Selected</h2>
+    <p id="confirmStyle"></p>
+    <p style="color:#666; font-size:0.85rem; margin-top:1rem;">You can close this window now.</p>
+  </div>
+</div>
+
+<script>
+  // -- The server injects candidate data here --
+  const CANDIDATES = /*__CANDIDATES_JSON__*/ {"band_name":"Artist","analysis_summary":"","concepts":[]};
+
+  // -- Utility: determine text luminance for contrast --
+  function luminance(hex) {
+    hex = hex.replace('#', '');
+    if (hex.length === 3) hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+    const r = parseInt(hex.substr(0,2),16)/255;
+    const g = parseInt(hex.substr(2,2),16)/255;
+    const b = parseInt(hex.substr(4,2),16)/255;
+    const srgb = [r,g,b].map(c => c <= 0.03928 ? c/12.92 : Math.pow((c+0.055)/1.055, 2.4));
+    return 0.2126*srgb[0] + 0.7152*srgb[1] + 0.0722*srgb[2];
+  }
+
+  function contrastText(bgHex) {
+    if (!bgHex || bgHex.startsWith('rgba')) return '#fff';
+    return luminance(bgHex) > 0.4 ? '#111' : '#fff';
+  }
+
+  // -- Load Google Fonts for all concepts --
+  function loadFonts(concepts) {
+    const families = new Set();
+    concepts.forEach(c => {
+      const f = c.theme && c.theme.fonts;
+      if (!f) return;
+      if (f.heading) families.add(f.heading + ':wght@' + (f.heading_weights || '400;700'));
+      if (f.body) families.add(f.body + ':wght@' + (f.body_weights || '400;600'));
+    });
+    if (families.size === 0) return;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://fonts.googleapis.com/css2?' +
+      Array.from(families).map(f => 'family=' + encodeURIComponent(f.replace(/;/g, ','))).join('&') +
+      '&display=swap';
+    document.head.appendChild(link);
+  }
+
+  function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+  // -- Build the UI --
+  function render() {
+    const data = CANDIDATES;
+    const bandEl = document.getElementById('bandName');
+    const summaryEl = document.getElementById('analysisSummary');
+    const tabsEl = document.getElementById('styleTabs');
+    const panelsEl = document.getElementById('panelsContainer');
+
+    bandEl.textContent = data.band_name || 'the band';
+    summaryEl.textContent = data.analysis_summary || '';
+    if (!data.analysis_summary) summaryEl.style.display = 'none';
+
+    if (!data.concepts || data.concepts.length === 0) {
+      panelsEl.innerHTML = '<p style="text-align:center;padding:3rem;color:#888;">No concepts provided.</p>';
+      return;
+    }
+
+    loadFonts(data.concepts);
+
+    // Sort so recommended comes first
+    const sorted = data.concepts.slice().sort((a,b) => (b.recommended ? 1 : 0) - (a.recommended ? 1 : 0));
+
+    sorted.forEach((concept, idx) => {
+      const id = 'concept-' + idx;
+      const t = concept.theme || {};
+      const c = t.colors || {};
+      const f = t.fonts || {};
+      const heading = f.heading || 'sans-serif';
+      const body = f.body || 'sans-serif';
+
+      // Tab button
+      const btn = document.createElement('button');
+      btn.className = 'style-tab-btn' + (idx === 0 ? ' active' : '');
+      btn.dataset.panel = id;
+      btn.innerHTML = esc(concept.name || 'Concept ' + (idx+1)) +
+        (concept.recommended ? '<span class="rec-badge">recommended</span>' : '');
+      tabsEl.appendChild(btn);
+
+      // Panel
+      const panel = document.createElement('div');
+      panel.className = 'style-panel' + (idx === 0 ? ' active' : '');
+      panel.id = 'panel-' + id;
+
+      const bg = c.bg || '#0a0a1a';
+      const bgSec = c.bg_secondary || '#111';
+      const surface = c.surface || '#1a1a2e';
+      const text = c.text || '#e0e0e0';
+      const textMuted = c.text_muted || '#888';
+      const accent = c.accent || '#4fc3f7';
+      const accentSec = c.accent_secondary || '#7c4dff';
+      const border = c.border || 'rgba(255,255,255,0.08)';
+      const btnBg = accent;
+      const btnText = contrastText(accent);
+
+      const sep = (t.hero && t.hero.tagline_separator) || '|';
+
+      panel.innerHTML = `
+        <div class="preview-container">
+          <div class="rationale">${esc(concept.rationale || '')}</div>
+          <div class="preview-box" style="background:${bg};">
+            <div class="preview-hero" style="background:linear-gradient(135deg, ${bgSec} 0%, ${bg} 100%);">
+              <h2 style="font-family:'${heading}',sans-serif; color:${accent}; letter-spacing:0.08em;">
+                ${esc((data.band_name || 'ARTIST').toUpperCase())}
+              </h2>
+              <p style="color:${textMuted};">Genre ${sep} Origin ${sep} Years Active</p>
+            </div>
+            <div class="preview-body" style="background:${bg}; color:${text};">
+              <h3 style="color:${accent}; font-family:'${heading}',sans-serif;">Timeline Preview</h3>
+              <div class="preview-timeline">
+                <style>
+                  #panel-${id} .preview-timeline::before { background: linear-gradient(to bottom, ${accent}, ${accentSec}); }
+                  #panel-${id} .preview-event::before { background: ${accent}; box-shadow: 0 0 6px ${accent}; }
+                </style>
+                <div class="preview-event">
+                  <div class="ev-date" style="color:${accent};">Formation</div>
+                  <div class="ev-title" style="color:${text};">Band Formed</div>
+                </div>
+                <div class="preview-event">
+                  <div class="ev-date" style="color:${accent};">Peak Era</div>
+                  <div class="ev-title" style="color:${text};">Commercial Breakthrough</div>
+                </div>
+                <div class="preview-event">
+                  <div class="ev-date" style="color:${accent};">Later</div>
+                  <div class="ev-title" style="color:${text};">Lineup Change</div>
+                </div>
+              </div>
+              <h3 style="color:${accent}; font-family:'${heading}',sans-serif;">Member Cards</h3>
+              <div class="preview-cards">
+                <div class="preview-card" style="background:${surface}; border:1px solid ${border};">
+                  <div class="card-icon">&#127928;</div>
+                  <div class="card-label" style="color:${accent};">Vocals / Guitar</div>
+                </div>
+                <div class="preview-card" style="background:${surface}; border:1px solid ${border};">
+                  <div class="card-icon">&#127929;</div>
+                  <div class="card-label" style="color:${accent};">Keyboards</div>
+                </div>
+                <div class="preview-card" style="background:${surface}; border:1px solid ${border};">
+                  <div class="card-icon">&#129345;</div>
+                  <div class="card-label" style="color:${accent};">Drums</div>
+                </div>
+              </div>
+            </div>
+            <div class="preview-meta" style="color:${textMuted};">
+              <span>${esc(heading)} + ${esc(body)}</span>
+              <span>${esc(t.hero && t.hero.effect ? t.hero.effect : 'custom')}</span>
+            </div>
+          </div>
+          <div class="choose-row">
+            <button class="choose-btn"
+                    style="background:${btnBg}; color:${btnText};"
+                    onclick="choose(${idx})">
+              Choose ${esc(concept.name || 'this style')}
+            </button>
+          </div>
+        </div>`;
+
+      panelsEl.appendChild(panel);
+    });
+
+    // Tab switching
+    tabsEl.querySelectorAll('.style-tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabsEl.querySelectorAll('.style-tab-btn').forEach(b => b.classList.remove('active'));
+        panelsEl.querySelectorAll('.style-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('panel-' + btn.dataset.panel).classList.add('active');
+      });
+    });
+  }
+
+  // -- Selection handler --
+  function choose(conceptIndex) {
+    const concept = CANDIDATES.concepts.sort((a,b) =>
+      (b.recommended ? 1 : 0) - (a.recommended ? 1 : 0)
+    )[conceptIndex];
+
+    const theme = concept.theme || {};
+    document.getElementById('confirmStyle').textContent = concept.name || 'Selected';
+    document.getElementById('confirmOverlay').classList.add('visible');
+
+    fetch('/select', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(theme)
+    }).catch(() => {
+      document.title = 'SELECTED:' + JSON.stringify(theme);
+    });
+  }
+
+  // -- Boot --
+  render();
+</script>
+
+</body>
+</html>

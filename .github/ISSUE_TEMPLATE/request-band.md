@@ -2,7 +2,7 @@
 name: Band Request
 about: Request a new band to be added to Bander
 title: "Band request: "
-labels: band-request
+labels: band
 ---
 
 ## Requested band

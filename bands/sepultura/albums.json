@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Morbid Visions",
+    "year": "1986",
+    "description": "Sepultura's debut album, a raw death/black metal assault influenced by Venom, Celtic Frost, and Slayer. Contains the early fan favorite 'Troops of Doom' and established the band's underground reputation.",
+    "cover_image": "assets/images/albums/morbid-visions.jpg"
+  },
+  {
+    "title": "Schizophrenia",
+    "year": "1987",
+    "description": "First album with guitarist Andreas Kisser, marking a dramatic leap in technical ability and a shift toward thrash metal. Caught the attention of Roadrunner Records, who signed the band in 1988.",
+    "cover_image": "assets/images/albums/schizophrenia.jpg"
+  },
+  {
+    "title": "Beneath the Remains",
+    "year": "1989",
+    "description": "The international breakthrough, produced by Scott Burns. Hailed by Terrorizer as one of the all-time top 20 thrash metal albums and rated 4.5/5 by AllMusic as 'one of the most essential death/thrash metal albums of all time.'",
+    "cover_image": "assets/images/albums/beneath-the-remains.jpg"
+  },
+  {
+    "title": "Arise",
+    "year": "1991",
+    "description": "Recorded at Morrisound Studios in Tampa, Florida; Sepultura's first album to chart in the US at No. 119 on the Billboard 200. MTV banned the title track video for its apocalyptic religious imagery.",
+    "cover_image": "assets/images/albums/arise.jpg"
+  },
+  {
+    "title": "Chaos A.D.",
+    "year": "1993",
+    "description": "A genre-defining pivot toward groove metal, certified Gold by the RIAA. AllMusic called it 'one of the greatest heavy metal albums of all time.' The band toured with Pantera, Fear Factory, and the Ramones.",
+    "cover_image": "assets/images/albums/chaos-ad.jpg"
+  },
+  {
+    "title": "Roots",
+    "year": "1996",
+    "description": "The band's best-selling album, debuting at No. 27 on Billboard 200. Fused groove metal with Brazilian indigenous music recorded with the Xavante people; widely credited as a major influence on nu metal.",
+    "cover_image": "assets/images/albums/roots.jpg"
+  },
+  {
+    "title": "Against",
+    "year": "1998",
+    "description": "First album with vocalist Derrick Green, marking a new era for the band. While commercially less successful, AllMusic noted 'enough flashes of the old Sepultura brilliance to suggest great things are still to come.'",
+    "cover_image": "assets/images/albums/against.jpg"
+  },
+  {
+    "title": "Nation",
+    "year": "2001",
+    "description": "The final Roadrunner Records album, carrying an ambitious conceptual theme of building a 'Sepulnation.' Represented the band's determined effort to forge a new identity independent of the Cavalera legacy.",
+    "cover_image": "assets/images/albums/nation.jpg"
+  },
+  {
+    "title": "Roorback",
+    "year": "2003",
+    "description": "First album with SPV Records. AllMusic gave it 4/5, stating it 'should put to rest for good' any doubts about the Derrick Green era, calling the writing 'consistently strong.'",
+    "cover_image": "assets/images/albums/roorback.jpg"
+  },
+  {
+    "title": "Dante XXI",
+    "year": "2006",
+    "description": "A concept album based on Dante Alighieri's Divine Comedy and the last album to feature Igor Cavalera on drums. AllMusic called it 'easily one of Sepultura's strongest releases to feature Green on vocals.'",
+    "cover_image": "assets/images/albums/dante-xxi.jpg"
+  },
+  {
+    "title": "A-Lex",
+    "year": "2009",
+    "description": "The first album without either Cavalera brother, based on Anthony Burgess's A Clockwork Orange. AllMusic gave it 4/5, praising the band for maintaining vitality despite the major personnel changes.",
+    "cover_image": "assets/images/albums/a-lex.jpg"
+  },
+  {
+    "title": "Kairos",
+    "year": "2011",
+    "description": "First album for Nuclear Blast Records and first with drummer Eloy Casagrande, produced by Roy Z. Marked a return to the classic Sepultura logo and signaled a creative reinvigoration.",
+    "cover_image": "assets/images/albums/kairos.jpg"
+  },
+  {
+    "title": "The Mediator Between Head and Hands Must Be the Heart",
+    "year": "2013",
+    "description": "Loosely based on Fritz Lang's 1927 film Metropolis, continuing the band's tradition of literary and cinematic concept albums. Featured the single 'The Age of the Atheist.'",
+    "cover_image": "assets/images/albums/the-mediator.jpg"
+  },
+  {
+    "title": "Machine Messiah",
+    "year": "2017",
+    "description": "Incorporated progressive rock alongside thrash and groove metal, reaching No. 27 in Germany and No. 9 on the UK Rock chart. Received positive reviews for its musical ambition and diversity.",
+    "cover_image": "assets/images/albums/machine-messiah.jpg"
+  },
+  {
+    "title": "Quadra",
+    "year": "2020",
+    "description": "Sepultura's fifteenth and final studio album, debuting at No. 5 in Germany and on the UK Rock chart -- their highest chart positions in years. Named after the Quadra neighborhood in Belo Horizonte.",
+    "cover_image": "assets/images/albums/quadra.jpg"
+  }
+]

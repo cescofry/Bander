@@ -1,0 +1,130 @@
+{
+  "artist": {
+    "name": "Example Band",
+    "formed": "1990",
+    "dissolved": null,
+    "origin": "London, England",
+    "genres": ["Alternative Rock", "Post-Punk"],
+    "labels": ["Island Records", "Interscope"],
+    "description": "Example Band is a fictional alternative rock group formed in London in 1990. Known for their atmospheric sound and visual live shows, they became one of the defining acts of the British alternative scene."
+  },
+  "members": [
+    {
+      "name": "Alex Singer",
+      "role": "Vocals, Guitar",
+      "active_period": "1990-present",
+      "bio": "Founding member and primary songwriter. Known for introspective lyrics and distinctive vocal style.",
+      "side_projects": ["The Quiet Hours"],
+      "images": [
+        "assets/images/members/alex-singer-1992.jpg",
+        "assets/images/members/alex-singer-2010.jpg"
+      ]
+    },
+    {
+      "name": "Jordan Keys",
+      "role": "Lead Guitar",
+      "active_period": "1990-2005",
+      "bio": "Co-founder who shaped the band's signature guitar sound. Left the band in 2005 to pursue solo work.",
+      "side_projects": ["Parallax", "Jordan Keys Solo"],
+      "images": [
+        "assets/images/members/jordan-keys-1995.jpg"
+      ]
+    },
+    {
+      "name": "Sam Rhythm",
+      "role": "Drums",
+      "active_period": "1990-present",
+      "bio": "The rhythmic backbone of the band since day one. Known for complex polyrhythmic patterns.",
+      "side_projects": [],
+      "images": [
+        "assets/images/members/sam-rhythm-2000.jpg"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "date": "1990",
+      "title": "Band Formation",
+      "description": "Alex Singer and Jordan Keys meet at a London pub and decide to form a band. Sam Rhythm joins within weeks.",
+      "category": "formation",
+      "image": null,
+      "members_involved": ["Alex Singer", "Jordan Keys", "Sam Rhythm"]
+    },
+    {
+      "date": "1993",
+      "title": "Debut Album Released",
+      "description": "Their self-titled debut album is released on Island Records to critical acclaim.",
+      "category": "album_release",
+      "image": "assets/images/albums/debut.jpg",
+      "members_involved": []
+    },
+    {
+      "date": "2005",
+      "title": "Jordan Keys Departs",
+      "description": "Jordan Keys announces his departure from the band to focus on solo projects.",
+      "category": "lineup_change",
+      "image": null,
+      "members_involved": ["Jordan Keys"]
+    },
+    {
+      "date": "2010",
+      "title": "Rock Hall Nomination",
+      "description": "Example Band receives their first Rock & Roll Hall of Fame nomination.",
+      "category": "milestone",
+      "image": null,
+      "members_involved": []
+    }
+  ],
+  "albums": [
+    {
+      "title": "Example Band",
+      "year": "1993",
+      "description": "Self-titled debut that established the band's atmospheric sound.",
+      "cover_image": "assets/images/albums/debut.jpg"
+    },
+    {
+      "title": "Signal & Noise",
+      "year": "1996",
+      "description": "Sophomore album that expanded into electronic textures. Commercial breakthrough.",
+      "cover_image": "assets/images/albums/signal-noise.jpg"
+    },
+    {
+      "title": "The Long View",
+      "year": "2002",
+      "description": "Ambitious concept album considered their masterpiece by critics.",
+      "cover_image": "assets/images/albums/long-view.jpg"
+    }
+  ],
+  "videos": [
+    {
+      "title": "Echoes in the Dark (Official Video)",
+      "youtube_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "category": "official",
+      "year": "1993"
+    },
+    {
+      "title": "Signal & Noise (Official Video)",
+      "youtube_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "category": "official",
+      "year": "1996"
+    },
+    {
+      "title": "Live at Glastonbury 2001",
+      "youtube_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "category": "live",
+      "year": "2001"
+    },
+    {
+      "title": "The Long View - Full Album Live",
+      "youtube_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "category": "live",
+      "year": "2003"
+    }
+  ],
+  "trivia": [
+    "Their debut album was recorded in just 10 days.",
+    "Signal & Noise spent 45 weeks on the UK Albums Chart.",
+    "The Long View was inspired by a train journey from London to Edinburgh.",
+    "Sam Rhythm has never missed a single concert in the band's history."
+  ]
+}

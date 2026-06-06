@@ -1,0 +1,39 @@
+{
+  "style": "Belo Horizonte Concrete",
+  "colors": {
+    "bg": "#121416",
+    "bg_secondary": "#1a1d21",
+    "surface": "#22262b",
+    "text": "#d0d4d8",
+    "text_muted": "#707880",
+    "accent": "#7ab648",
+    "accent_secondary": "#4a9eba",
+    "nav_bg": "#0d0f11",
+    "border": "#2e3338"
+  },
+  "badges": {
+    "formation": "#7ab648",
+    "album_release": "#4a9eba",
+    "lineup_change": "#b0b0b0",
+    "milestone": "#c0c040",
+    "controversy": "#ba4a4a",
+    "breakup": "#606060",
+    "reunion": "#50b080",
+    "death": "#404040",
+    "other": "#808080",
+    "official": "#7ab648",
+    "live": "#4a9eba",
+    "interview": "#b0b0b0",
+    "documentary": "#808080"
+  },
+  "fonts": {
+    "heading": "Barlow Condensed",
+    "body": "Inter",
+    "heading_weights": "400;700;900",
+    "body_weights": "300;400;600"
+  },
+  "hero": {
+    "effect": "static-grain",
+    "tagline_separator": "|"
+  }
+}

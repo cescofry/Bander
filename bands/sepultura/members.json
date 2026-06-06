@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Max Cavalera",
+    "role": "Vocals, Rhythm Guitar",
+    "active_period": "1984-1996",
+    "bio": "Co-founded Sepultura at age 14 with brother Igor after their father's death, serving as frontman and rhythm guitarist through the band's most commercially successful era. His aggressive vocal style and down-tuned riffing defined the Sepultura sound on landmark albums like Beneath the Remains, Arise, Chaos A.D., and Roots. Left the band in January 1997 after a management dispute, going on to form Soulfly.",
+    "side_projects": ["Soulfly", "Cavalera Conspiracy", "Nailbomb", "Killer Be Killed", "Go Ahead and Die"],
+    "images": ["assets/images/members/max-cavalera.jpg"]
+  },
+  {
+    "name": "Igor Cavalera",
+    "role": "Drums",
+    "active_period": "1984-2006",
+    "bio": "Co-founded Sepultura at age 13 with brother Max and was the last original member to leave the band. Known for introducing tribal drumming elements on Chaos A.D. and Roots that became a defining part of the band's sound. Departed in 2006 citing artistic incompatibility, later reuniting with Max in Cavalera Conspiracy.",
+    "side_projects": ["Cavalera Conspiracy", "Mixhell", "Petbrick", "Absent in Body"],
+    "images": ["assets/images/members/igor-cavalera.jpg"]
+  },
+  {
+    "name": "Andreas Kisser",
+    "role": "Lead Guitar",
+    "active_period": "1987-present",
+    "bio": "Sao Paulo-based guitarist who replaced Jairo Guedz in early 1987, bringing dramatically improved technical ability that elevated the band's sound from raw death metal to world-class thrash. Has appeared on every Sepultura album since Schizophrenia and became the band's central creative force in the post-Cavalera era. The longest-serving guitarist in the band's history.",
+    "side_projects": ["De La Tierra"],
+    "images": ["assets/images/members/andreas-kisser.jpg"]
+  },
+  {
+    "name": "Paulo Jr.",
+    "role": "Bass",
+    "active_period": "1984-present",
+    "bio": "Born Paulo Xisto Pinto Jr., he joined Sepultura shortly after its formation in late 1984 and is the longest-serving member of the band. Despite his long tenure, he did not perform on studio album recordings until Chaos A.D. (1993), as Kisser handled bass in the studio on earlier records. The sole remaining link to the band's original era since Igor's departure in 2006.",
+    "side_projects": [],
+    "images": ["assets/images/members/paulo-jr.jpg"]
+  },
+  {
+    "name": "Derrick Green",
+    "role": "Vocals",
+    "active_period": "1997-present",
+    "bio": "American musician selected as Sepultura's new frontman in late 1997 after Max Cavalera's departure, chosen from a pool of auditioners that included notable metal vocalists. His first public show was July 8, 1998 at the House of Blues in Los Angeles under the pseudonym 'Troops of Doom.' Has fronted the band on all studio albums from Against (1998) through Quadra (2020) and the final EP The Cloud of Unknowing (2026).",
+    "side_projects": [],
+    "images": ["assets/images/members/derrick-green.jpg"]
+  },
+  {
+    "name": "Jairo Guedz",
+    "role": "Lead Guitar",
+    "active_period": "1985-1987",
+    "bio": "Early lead guitarist who joined Sepultura in 1985 after Wagner Lamounier's departure to form Sarcofago. Appeared on the Bestial Devastation EP and the debut album Morbid Visions, helping shape the band's early death/black metal sound. Quit the band in early 1987 and was replaced by Andreas Kisser.",
+    "side_projects": [],
+    "images": ["assets/images/members/jairo-guedz.jpg"]
+  },
+  {
+    "name": "Eloy Casagrande",
+    "role": "Drums",
+    "active_period": "2011-2024",
+    "bio": "Brazilian drummer who replaced Jean Dolabella and joined Sepultura in time for the Kairos album sessions in 2011. Performed on four studio albums -- Kairos, The Mediator Between Head and Hands Must Be the Heart, Machine Messiah, and Quadra -- bringing exceptional technical precision. Left the band in 2024 before the farewell tour.",
+    "side_projects": [],
+    "images": ["assets/images/members/eloy-casagrande.jpg"]
+  },
+  {
+    "name": "Greyson Nekrutman",
+    "role": "Drums",
+    "active_period": "2024-present",
+    "bio": "Current and final drummer of Sepultura, joining in 2024 after Eloy Casagrande's departure. Performing with the band throughout their two-year farewell tour that began in March 2024. Appeared on the band's final studio recording, The Cloud of Unknowing EP (2026).",
+    "side_projects": [],
+    "images": ["assets/images/members/greyson-nekrutman.jpg"]
+  }
+]

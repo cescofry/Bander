@@ -49,12 +49,9 @@ Bander/
           members/           Member portraits
           albums/            Album covers
           events/            Event photos
-  SKILL/                     AI skill for generating band packages
-    SKILL.md                 Skill specification
-    references/              Schema, blueprint, design patterns
-    scripts/                 Style chooser, prompt builder, validator
-    sources/                 Research templates and guides
-    tests/                   Evaluation prompts
+  .opencode/skills/          Project-local AI skills
+    create-band-package/     Researches a band and produces a data package
+    plan-work/               Plans and organizes Bander project work
 ```
 
 ## How It Works
@@ -193,7 +190,7 @@ Missing images (paths set to `null` in JSON) are handled gracefully -- the app s
 
 ### Full Schema
 
-See `SKILL/references/content_schema.json` for the complete JSON schema covering all files and fields.
+See `.opencode/skills/create-band-package/references/content_schema.json` for the complete JSON schema covering all files and fields.
 
 ## Adding a Band
 
@@ -212,14 +209,14 @@ See `SKILL/references/content_schema.json` for the complete JSON schema covering
 
 5. Validate:
    ```bash
-   python3 SKILL/scripts/validate_band_package.py bands/led-zeppelin
+   python3 .opencode/skills/create-band-package/scripts/validate_band_package.py bands/led-zeppelin
    ```
 
 6. Restart the server (or it picks up the new folder on the next `/api/bands` request).
 
 ### Using the Skill
 
-The `band-research` skill automates research and package creation. Trigger it with prompts like:
+The `create-band-package` skill automates research and package creation. Trigger it with prompts like:
 
 - "Add a band -- Led Zeppelin"
 - "Research Queen for Bander"
@@ -235,14 +232,14 @@ The skill will:
    - **Initials placeholders** generated with Pillow for any member with no available photo.
 5. Validate the package.
 
-See `SKILL/SKILL.md` for the full workflow specification.
+See `.opencode/skills/create-band-package/SKILL.md` for the full workflow specification.
 
 ## Validation
 
 Validate a band package against the data contract:
 
 ```bash
-python3 SKILL/scripts/validate_band_package.py bands/pantera
+python3 .opencode/skills/create-band-package/scripts/validate_band_package.py bands/pantera
 ```
 
 Checks performed:
@@ -262,7 +259,7 @@ artist's genre, logo palette, album art motifs, era, and cultural
 context, then produces three bespoke visual direction concepts -- each
 with a unique name, rationale, and complete color/font/badge tokens.
 
-The interactive style chooser (`SKILL/scripts/style_chooser.py`)
+The interactive style chooser (`.opencode/skills/create-band-package/scripts/style_chooser.py`)
 opens a browser preview of all three concepts so the user can compare
 them side by side before confirming. The chosen theme is written
 directly to `theme.json`.
