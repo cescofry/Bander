@@ -1,0 +1,44 @@
+# Bander -- nginx reverse-proxy example
+#
+# This configuration proxies all requests under /bander/ to the
+# Python backend running on 127.0.0.1:8888.
+#
+# Place this inside an existing server {} block or include it from
+# your main nginx.conf.
+#
+# Adjust:
+#   - the port (8888) to match config.json "port"
+#   - the path (/bander) to match config.json "base_path"
+#   - SSL/TLS settings for your domain
+
+# -- Proxy all /bander/ requests to the Python app --
+location /bander/ {
+    proxy_pass http://127.0.0.1:8888/bander/;
+
+    proxy_set_header Host              $host;
+    proxy_set_header X-Real-IP         $remote_addr;
+    proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-Host  $host;
+
+    # WebSocket support (not currently used, but safe to include)
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade    $http_upgrade;
+    proxy_set_header Connection "upgrade";
+
+    # Timeouts
+    proxy_connect_timeout 10s;
+    proxy_read_timeout    30s;
+    proxy_send_timeout    30s;
+}
+
+# -- Optional: redirect bare /bander to /bander/ --
+location = /bander {
+    return 301 /bander/;
+}
+
+# -- Optional: health check endpoint for monitoring --
+# location = /bander/healthz {
+#     proxy_pass http://127.0.0.1:8888/bander/healthz;
+#     access_log off;
+# }

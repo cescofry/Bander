@@ -19,18 +19,26 @@ open http://localhost:8888/
 
 The catalog page lists every band found under `bands/`. Click one to see its full page.
 
+The server reads `config.json` from the project root on startup. See [Configuration](#configuration) for all available options.
+
 ### Server Options
 
 ```bash
 python3 server.py --port 9000              # use a different port
 python3 server.py --bands-dir /path/to/bands  # point to a different bands folder
+python3 server.py --base-path /bander      # serve under a URL prefix
+python3 server.py --host 0.0.0.0           # bind to all interfaces
+python3 server.py --config /etc/bander.json  # use a custom config path
 ```
+
+CLI arguments override values from `config.json`.
 
 ## Project Structure
 
 ```
 Bander/
-  server.py                  Local HTTP server (Python stdlib, zero deps)
+  server.py                  HTTP server (Python stdlib, zero deps)
+  config.json                Runtime configuration (port, host, base_path, etc.)
   app/                       Generic frontend (shared by all bands)
     index.html               SPA entry point
     assets/
@@ -49,6 +57,8 @@ Bander/
           members/           Member portraits
           albums/            Album covers
           events/            Event photos
+  deploy/                    Deployment examples
+    nginx.conf.example       nginx reverse-proxy config
   .opencode/skills/          Project-local AI skills
     create-band-package/     Researches a band and produces a data package
     plan-work/               Plans and organizes Bander project work
@@ -98,16 +108,16 @@ The app also updates the Google Fonts `<link>` tag dynamically if the theme spec
 
 All three content sections (Live, The Band, Chronology) are rendered as stacked blocks on a single scrollable page. The sticky top navigation bar acts as a jump menu -- clicking a section name smooth-scrolls to it. An `IntersectionObserver` keeps the active nav button in sync with whichever section is currently in view.
 
-#### YouTube Player and Localhost
+#### YouTube Player and Localhost (Local Dev)
 
-YouTube rejects embedded iframes when the browser's `Referer` header contains a raw IP address (e.g. `127.0.0.1`). The app handles this in two ways:
+YouTube rejects embedded iframes when the browser's `Referer` header contains a raw IP address (e.g. `127.0.0.1`). For **local development**, the app handles this in two ways:
 
-1. **`localhost` binding** -- the server binds to `localhost` instead of `127.0.0.1`.
+1. **`localhost` binding** -- the server binds to `localhost` by default.
 2. **Auto-redirect** -- if you open the site via `http://127.0.0.1:8888/`, the app automatically redirects to `http://localhost:8888/`.
 
-The Live section uses the YouTube IFrame Player API to create a single persistent player and load videos from the band's `youtube_url` entries as a playlist. When a video ends, the next item plays automatically.
+When deployed publicly behind nginx on a real domain, this is not an issue -- YouTube accepts domain-based referrers.
 
-Always access the site at `http://localhost:<port>/` for YouTube playback to work.
+Always access the site at `http://localhost:<port>/` for local YouTube playback to work.
 
 ## Band Package Format
 
@@ -275,3 +285,117 @@ Example concepts (for a groove metal band from Texas):
 
 Custom themes beyond generated concepts are supported by editing
 `theme.json` directly.
+
+## Configuration
+
+The server reads `config.json` from the project root on startup. All fields are optional -- defaults are used for anything omitted.
+
+```json
+{
+  "host": "127.0.0.1",
+  "port": 8888,
+  "bands_dir": "./bands",
+  "base_path": "/bander",
+  "public_base_url": "https://example.com/bander",
+  "github_issues_url": "https://github.com/cescofry/Bander/issues/new"
+}
+```
+
+| Field | Default | Description |
+|-------|---------|-------------|
+| `host` | `127.0.0.1` | Address to bind to. Use `127.0.0.1` behind a reverse proxy. |
+| `port` | `8888` | Port to listen on. |
+| `bands_dir` | `./bands` | Path to the bands directory (relative to project root). |
+| `base_path` | `""` (root) | URL prefix for all routes, e.g. `/bander`. |
+| `public_base_url` | `""` | Full public URL for display/links (informational). |
+| `github_issues_url` | GitHub URL | URL for the "Request a band" feature. |
+
+CLI arguments (`--port`, `--host`, `--bands-dir`, `--base-path`, `--config`) override config file values.
+
+To use a config file at a different path:
+
+```bash
+python3 server.py --config /etc/bander/config.json
+```
+
+## Deployment
+
+The server is designed to run behind an nginx reverse proxy on a public server.
+
+### Setup
+
+1. Clone the repository on your server.
+
+2. Edit `config.json` with your deployment settings:
+
+   ```json
+   {
+     "host": "127.0.0.1",
+     "port": 8888,
+     "base_path": "/bander",
+     "public_base_url": "https://yourdomain.com/bander",
+     "github_issues_url": "https://github.com/cescofry/Bander/issues/new"
+   }
+   ```
+
+3. Configure nginx using `deploy/nginx.conf.example` as a starting point.
+   Add the `location` block to your existing `server {}` configuration:
+
+   ```nginx
+   location /bander/ {
+       proxy_pass http://127.0.0.1:8888/bander/;
+       proxy_set_header Host              $host;
+       proxy_set_header X-Real-IP         $remote_addr;
+       proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
+       proxy_set_header X-Forwarded-Proto $scheme;
+       proxy_set_header X-Forwarded-Host  $host;
+   }
+
+   location = /bander {
+       return 301 /bander/;
+   }
+   ```
+
+4. Start the server:
+
+   ```bash
+   python3 server.py
+   ```
+
+5. Reload nginx:
+
+   ```bash
+   sudo nginx -t && sudo nginx -s reload
+   ```
+
+6. Visit `https://yourdomain.com/bander/` to verify.
+
+### Health Check
+
+The server exposes a health endpoint at `<base_path>/healthz` (e.g. `/bander/healthz`).
+It returns `{"status": "ok"}` with a 200 response. Use this for monitoring or load-balancer checks.
+
+### Process Management
+
+For production, run the server under a process manager so it restarts on failure. Example with systemd:
+
+```ini
+[Unit]
+Description=Bander server
+After=network.target
+
+[Service]
+WorkingDirectory=/path/to/Bander
+ExecStart=/usr/bin/python3 server.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
+```
+
+### Security Notes
+
+- The server validates that all static file requests resolve inside the `app/` or `bands/` directories. Path-traversal attempts are rejected.
+- Bind to `127.0.0.1` (the default) when running behind nginx. Do not bind to `0.0.0.0` unless you have a firewall blocking direct access to the app port.
+- Configure SSL/TLS termination in nginx, not in the Python server.

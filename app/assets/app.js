@@ -7,9 +7,18 @@
   'use strict';
 
   // -----------------------------------------------------------------
+  // Runtime config injected by the server into index.html.
+  // Falls back to empty basePath for vanilla local dev.
+  // -----------------------------------------------------------------
+  var cfg = window.BANDER_CONFIG || {};
+  var basePath = cfg.basePath || '';          // e.g. "/bander"
+  var githubIssuesUrl = cfg.githubIssuesUrl || 'https://github.com/cescofry/Bander/issues/new';
+
+  // -----------------------------------------------------------------
   // YouTube rejects embeds when the Referer is an IP address
   // (e.g. 127.0.0.1). Redirect to "localhost" so the browser sends
   // a hostname-based Referer that YouTube accepts.
+  // Only applies in local dev (hostname is literally 127.0.0.1).
   // -----------------------------------------------------------------
   if (location.hostname === '127.0.0.1') {
     location.replace(location.href.replace('127.0.0.1', 'localhost'));
@@ -83,7 +92,7 @@
 
   async function loadCatalog() {
     try {
-      var res = await fetch('/api/bands');
+      var res = await fetch(basePath + '/api/bands');
       allBands = await res.json();
       applySearch();
     } catch (err) {
@@ -136,7 +145,7 @@
       '## Additional notes\n' +
       '<!-- Anything else: specific albums, eras, live footage, etc. -->\n';
 
-    var issueUrl = 'https://github.com/cescofry/Bander/issues/new'
+    var issueUrl = githubIssuesUrl
       + '?title=' + encodeURIComponent(issueTitle)
       + '&body=' + encodeURIComponent(issueBody)
       + '&labels=' + encodeURIComponent('band-request');
@@ -180,7 +189,7 @@
   async function loadBand(slug) {
     currentSlug = slug;
     try {
-      var res = await fetch('/api/bands/' + encodeURIComponent(slug));
+      var res = await fetch(basePath + '/api/bands/' + encodeURIComponent(slug));
       if (!res.ok) throw new Error('Not found');
       currentBand = await res.json();
     } catch (err) {
@@ -699,7 +708,7 @@
   // -----------------------------------------------------------------
   function bandAssetPath(relativePath) {
     if (!currentSlug) return relativePath;
-    return '/bands/' + currentSlug + '/' + relativePath;
+    return basePath + '/bands/' + currentSlug + '/' + relativePath;
   }
 
   function extractYouTubeId(url) {
