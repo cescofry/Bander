@@ -25,6 +25,13 @@
   let allBands = [];        // full catalog for client-side filtering
   let searchQuery = '';     // current search text
 
+  // YouTube IFrame API state
+  let ytPlayer = null;        // YT.Player instance
+  let ytApiReady = false;     // true once YT API has loaded
+  let ytPendingVideos = null; // queued video list if API isn't ready yet
+  let ytVideoIds = [];        // current playlist video IDs
+  let ytActiveIndex = 0;      // currently playing index
+
   // -----------------------------------------------------------------
   // DOM refs
   // -----------------------------------------------------------------
@@ -66,6 +73,7 @@
   function showCatalog() {
     currentBand = null;
     currentSlug = null;
+    destroyPlayer();
     bandView.classList.add('hidden');
     catalogView.classList.remove('hidden');
     document.title = 'Bander';
@@ -283,88 +291,222 @@
   }
 
   // -----------------------------------------------------------------
-  // Render: Videos
+  // Render: Videos (single player + playlist sidebar)
   // -----------------------------------------------------------------
+
+  // Load YouTube IFrame API once
+  function ensureYouTubeAPI() {
+    if (ytApiReady || document.getElementById('yt-api-script')) return;
+    var tag = document.createElement('script');
+    tag.id = 'yt-api-script';
+    tag.src = 'https://www.youtube.com/iframe_api';
+    var first = document.getElementsByTagName('script')[0];
+    first.parentNode.insertBefore(tag, first);
+  }
+
+  // Global callback required by YouTube IFrame API
+  window.onYouTubeIframeAPIReady = function () {
+    ytApiReady = true;
+    if (ytPendingVideos) {
+      initPlayer(ytPendingVideos);
+      ytPendingVideos = null;
+    }
+  };
+
+  function destroyPlayer() {
+    if (ytPlayer) {
+      try { ytPlayer.destroy(); } catch (e) { /* ignore */ }
+      ytPlayer = null;
+    }
+    ytVideoIds = [];
+    ytActiveIndex = 0;
+  }
+
   function renderVideos(videos) {
+    destroyPlayer();
+
     if (!videos.length) {
       videoGrid.innerHTML = '<p class="empty">No videos available.</p>';
       return;
     }
-    videoGrid.innerHTML = videos.map(function (v) {
+
+    // Separate playable videos from fallback-only entries
+    var playable = [];
+    var fallbacks = [];
+    videos.forEach(function (v) {
       var vidId = extractYouTubeId(v.youtube_url);
-      var badgeClass = 'badge--' + (v.category || 'other');
-      var label = categoryLabel(v.category);
-      var watchUrl = vidId
-        ? 'https://www.youtube.com/watch?v=' + encodeURIComponent(vidId)
-        : v.youtube_url || '#';
-
-      // If we cannot extract a valid video ID, show a plain link
-      if (!vidId) {
-        return (
-          '<article class="video-card reveal">' +
-            '<div class="video-wrap video-fallback">' +
-              '<a href="' + esc(watchUrl) + '" target="_blank" rel="noopener">' +
-                '<span class="video-fallback-text">Watch on YouTube</span>' +
-              '</a>' +
-            '</div>' +
-            '<div class="video-info">' +
-              '<h3>' + esc(v.title) +
-                (v.year ? ' <span class="video-year">(' + esc(v.year) + ')</span>' : '') +
-              '</h3>' +
-              '<span class="badge ' + badgeClass + '">' + esc(label) + '</span>' +
-            '</div>' +
-          '</article>'
-        );
+      if (vidId) {
+        playable.push({ id: vidId, title: v.title, year: v.year, category: v.category, url: v.youtube_url });
+      } else {
+        fallbacks.push(v);
       }
-
-      // Thumbnail + click-to-play: show a YouTube thumbnail with a play
-      // button overlay. On click, replace with an autoplaying iframe.
-      // This avoids Error 153 when serving from localhost / IP origins,
-      // because the iframe is only created after a user gesture.
-      var thumbUrl = 'https://i.ytimg.com/vi/' + encodeURIComponent(vidId) + '/hqdefault.jpg';
-      return (
-        '<article class="video-card reveal">' +
-          '<div class="video-wrap video-thumb" data-vid="' + esc(vidId) + '">' +
-            '<img class="video-thumb-img" src="' + esc(thumbUrl) + '" alt="' + esc(v.title) + '" loading="lazy">' +
-            '<button class="video-play-btn" aria-label="Play ' + esc(v.title) + '">' +
-              '<svg viewBox="0 0 68 48" width="68" height="48">' +
-                '<path class="video-play-bg" d="M66.5 7.7c-.8-2.9-2.5-5.4-5.4-6.2C55.8.1 34 0 34 0S12.2.1 6.9 1.6c-2.8.7-4.6 3.2-5.4 6.1C0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 2.6 5.4 5.4 6.2C12.2 47.9 34 48 34 48s21.8-.1 27.1-1.6c2.8-.7 4.6-3.2 5.4-6.1C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#212121" fill-opacity="0.8"/>' +
-                '<path d="M45 24L27 14v20" fill="#fff"/>' +
-              '</svg>' +
-            '</button>' +
-          '</div>' +
-          '<div class="video-info">' +
-            '<h3>' +
-              '<a href="' + esc(watchUrl) + '" target="_blank" rel="noopener" class="video-title-link">' +
-                esc(v.title) +
-              '</a>' +
-              (v.year ? ' <span class="video-year">(' + esc(v.year) + ')</span>' : '') +
-            '</h3>' +
-            '<span class="badge ' + badgeClass + '">' + esc(label) + '</span>' +
-          '</div>' +
-        '</article>'
-      );
-    }).join('');
-
-    // Attach click handlers for thumbnail-to-iframe replacement
-    videoGrid.querySelectorAll('.video-thumb').forEach(function (thumb) {
-      thumb.addEventListener('click', function () {
-        var vidId = this.dataset.vid;
-        if (!vidId) return;
-        var iframe = document.createElement('iframe');
-        iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(vidId) +
-          '?autoplay=1&rel=0';
-        iframe.title = (this.querySelector('img') || {}).alt || '';
-        iframe.frameBorder = '0';
-        iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
-        iframe.setAttribute('allow',
-          'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-        iframe.allowFullscreen = true;
-        this.innerHTML = '';
-        this.classList.remove('video-thumb');
-        this.appendChild(iframe);
-      });
     });
+
+    if (!playable.length) {
+      // All entries are invalid -- show fallback links
+      videoGrid.innerHTML = fallbacks.map(function (v) {
+        var badgeClass = 'badge--' + (v.category || 'other');
+        var label = categoryLabel(v.category);
+        var watchUrl = v.youtube_url || '#';
+        return (
+          '<div class="pl-fallback-item">' +
+            '<a href="' + esc(watchUrl) + '" target="_blank" rel="noopener">' +
+              esc(v.title) +
+              (v.year ? ' <span class="video-year">(' + esc(v.year) + ')</span>' : '') +
+            '</a>' +
+            '<span class="badge ' + badgeClass + '">' + esc(label) + '</span>' +
+          '</div>'
+        );
+      }).join('');
+      return;
+    }
+
+    ytVideoIds = playable.map(function (p) { return p.id; });
+
+    // Build the layout: player on the left, playlist on the right
+    var html =
+      '<div class="pl-shell reveal">' +
+        '<div class="pl-player-pane">' +
+          '<div class="pl-player-wrap">' +
+            '<div id="ytPlayerMount"></div>' +
+          '</div>' +
+          '<div class="pl-now-playing" id="plNowPlaying"></div>' +
+        '</div>' +
+        '<div class="pl-list-pane">' +
+          '<div class="pl-list-header">Playlist</div>' +
+          '<ol class="pl-list" id="plList">';
+
+    playable.forEach(function (p, i) {
+      var badgeClass = 'badge--' + (p.category || 'other');
+      var label = categoryLabel(p.category);
+      var thumbUrl = 'https://i.ytimg.com/vi/' + encodeURIComponent(p.id) + '/default.jpg';
+      html +=
+        '<li class="pl-item' + (i === 0 ? ' pl-item--active' : '') + '" data-index="' + i + '">' +
+          '<img class="pl-item-thumb" src="' + esc(thumbUrl) + '" alt="" loading="lazy">' +
+          '<div class="pl-item-info">' +
+            '<span class="pl-item-title">' + esc(p.title) + '</span>' +
+            (p.year ? '<span class="pl-item-year">' + esc(p.year) + '</span>' : '') +
+          '</div>' +
+          '<span class="badge ' + badgeClass + '">' + esc(label) + '</span>' +
+        '</li>';
+    });
+
+    html += '</ol>';
+
+    // Append fallback links if any
+    if (fallbacks.length) {
+      html += '<div class="pl-fallbacks">';
+      fallbacks.forEach(function (v) {
+        var badgeClass = 'badge--' + (v.category || 'other');
+        var label = categoryLabel(v.category);
+        var watchUrl = v.youtube_url || '#';
+        html +=
+          '<div class="pl-fallback-item">' +
+            '<a href="' + esc(watchUrl) + '" target="_blank" rel="noopener">' +
+              esc(v.title) +
+              (v.year ? ' <span class="video-year">(' + esc(v.year) + ')</span>' : '') +
+            '</a>' +
+            '<span class="badge ' + badgeClass + '">' + esc(label) + '</span>' +
+          '</div>';
+      });
+      html += '</div>';
+    }
+
+    html += '</div></div>';
+
+    videoGrid.innerHTML = html;
+    updateNowPlaying(playable[0]);
+
+    // Attach click handlers to playlist items
+    var plList = document.getElementById('plList');
+    plList.addEventListener('click', function (e) {
+      var item = e.target.closest('.pl-item');
+      if (!item) return;
+      var idx = parseInt(item.dataset.index, 10);
+      if (isNaN(idx)) return;
+      playAtIndex(idx);
+    });
+
+    // Load the YouTube API and create the player
+    ensureYouTubeAPI();
+    if (ytApiReady) {
+      initPlayer(playable);
+    } else {
+      ytPendingVideos = playable;
+    }
+  }
+
+  function initPlayer(playable) {
+    var mount = document.getElementById('ytPlayerMount');
+    if (!mount) return;
+
+    ytPlayer = new YT.Player('ytPlayerMount', {
+      height: '100%',
+      width: '100%',
+      videoId: playable[0].id,
+      playerVars: {
+        rel: 0,
+        playsinline: 1,
+        enablejsapi: 1,
+        origin: location.origin
+      },
+      events: {
+        onStateChange: onYTStateChange
+      }
+    });
+  }
+
+  function onYTStateChange(event) {
+    // When a video ends, play the next one
+    if (event.data === YT.PlayerState.ENDED) {
+      var next = ytActiveIndex + 1;
+      if (next < ytVideoIds.length) {
+        playAtIndex(next);
+      }
+    }
+  }
+
+  function playAtIndex(idx) {
+    if (idx < 0 || idx >= ytVideoIds.length) return;
+    ytActiveIndex = idx;
+
+    if (ytPlayer && typeof ytPlayer.loadVideoById === 'function') {
+      ytPlayer.loadVideoById(ytVideoIds[idx]);
+    }
+
+    // Update active state in playlist UI
+    var items = document.querySelectorAll('.pl-item');
+    items.forEach(function (el) {
+      el.classList.toggle('pl-item--active', parseInt(el.dataset.index, 10) === idx);
+    });
+
+    // Scroll active item into view
+    var active = document.querySelector('.pl-item--active');
+    if (active) {
+      active.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // Update now-playing bar
+    var data = null;
+    // Re-derive from current band data
+    if (currentBand && currentBand.videos) {
+      var vid = currentBand.videos.filter(function (v) {
+        return extractYouTubeId(v.youtube_url) === ytVideoIds[idx];
+      })[0];
+      if (vid) data = { title: vid.title, year: vid.year, category: vid.category };
+    }
+    updateNowPlaying(data);
+  }
+
+  function updateNowPlaying(info) {
+    var el = document.getElementById('plNowPlaying');
+    if (!el || !info) return;
+    var badgeClass = 'badge--' + (info.category || 'other');
+    var label = categoryLabel(info.category);
+    el.innerHTML =
+      '<span class="pl-now-title">' + esc(info.title) + '</span>' +
+      (info.year ? '<span class="pl-now-year">' + esc(info.year) + '</span>' : '') +
+      '<span class="badge ' + badgeClass + '">' + esc(label) + '</span>';
   }
 
   // -----------------------------------------------------------------

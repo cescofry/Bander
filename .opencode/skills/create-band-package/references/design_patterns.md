@@ -59,44 +59,47 @@ A horizontal bar that stays fixed at the top when scrolling past the hero.
 }
 ```
 
-## Video Grid (Live Tab)
+## Video Player + Playlist (Live Tab)
 
-Responsive grid of YouTube video thumbnails with click-to-play.
-Each card shows a YouTube thumbnail with a play button overlay.
-Clicking replaces the thumbnail with an autoplaying iframe.
+Single YouTube player with a scrollable playlist sidebar.
+Uses the YouTube IFrame Player API; clicking a playlist item
+switches the player, and the next video auto-plays on end.
 
 ```css
-.video-grid {
+.pl-shell {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: 1fr 360px;
   gap: 1.5rem;
-  padding: 2rem;
+  align-items: start;
 }
 
-.video-card {
-  border-radius: 8px;
+.pl-player-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
   overflow: hidden;
-  background: var(--card-bg);
+  border-radius: 10px;
+  background: #000;
 }
 
-.video-thumb {
-  cursor: pointer;
-}
-
-.video-thumb-img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-}
-
-.video-card iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
+.pl-player-wrap iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   border: none;
 }
 
-.video-card .video-info {
-  padding: 0.75rem 1rem;
+.pl-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+}
+
+.pl-item--active {
+  background: rgba(79, 195, 247, 0.08);
+  border-left: 3px solid var(--accent);
 }
 ```
 

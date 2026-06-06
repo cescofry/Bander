@@ -114,12 +114,12 @@ When a band is selected:
 - Visual motif driven by theme tokens (spotlight by default).
 
 ### Live Tab (default)
-- Grid of YouTube video thumbnails with click-to-play.
-- Each card: thumbnail + play button overlay + title + year + category badge.
-- Clicking the play button replaces the thumbnail with an autoplaying iframe.
-- Uses `youtube-nocookie.com` for privacy-enhanced embedding.
-- The iframe is only created on user click to avoid YouTube's embed
-  restrictions when serving from localhost.
+- Single YouTube player with a scrollable playlist sidebar.
+- Player on the left, playlist on the right (stacked on mobile).
+- Clicking a playlist item switches the player to that video.
+- When a video ends, the next item plays automatically.
+- Uses the YouTube IFrame Player API for playback control.
+- Invalid video URLs are shown as external fallback links.
 
 ### Chronology Tab
 - Vertical timeline with central spine.

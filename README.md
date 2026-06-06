@@ -82,7 +82,7 @@ The app is a single-page application with hash-based routing. No build tools or 
 
 - **Catalog** (`http://localhost:8888/`) -- fetches `/api/bands` and renders a card grid. Each card shows the band name, genres, origin, and a short description.
 - **Band page** (`http://localhost:8888/#/pantera`) -- fetches `/api/bands/pantera`, applies the band's theme, and renders three stacked sections on a single scrollable page:
-  - **Live** -- YouTube video thumbnails in a responsive grid with click-to-play
+  - **Live** -- a single YouTube player with a scrollable playlist sidebar; clicking a playlist item switches the player, and the next video plays automatically when the current one ends
   - **The Band** -- member cards with portraits, bios, and side projects
   - **Chronology** -- vertical timeline with color-coded event cards
 
@@ -98,13 +98,14 @@ The app also updates the Google Fonts `<link>` tag dynamically if the theme spec
 
 All three content sections (Live, The Band, Chronology) are rendered as stacked blocks on a single scrollable page. The sticky top navigation bar acts as a jump menu -- clicking a section name smooth-scrolls to it. An `IntersectionObserver` keeps the active nav button in sync with whichever section is currently in view.
 
-#### YouTube Embeds and Localhost
+#### YouTube Player and Localhost
 
-YouTube rejects embedded iframes when the browser's `Referer` header contains a raw IP address (e.g. `127.0.0.1`). The app handles this in three ways:
+YouTube rejects embedded iframes when the browser's `Referer` header contains a raw IP address (e.g. `127.0.0.1`). The app handles this in two ways:
 
 1. **`localhost` binding** -- the server binds to `localhost` instead of `127.0.0.1`.
 2. **Auto-redirect** -- if you open the site via `http://127.0.0.1:8888/`, the app automatically redirects to `http://localhost:8888/`.
-3. **Click-to-play** -- the Live section shows YouTube thumbnails with a play button overlay instead of loading iframes on page load. The iframe is created only when you click, which is faster and avoids bulk embed failures.
+
+The Live section uses the YouTube IFrame Player API to create a single persistent player and load videos from the band's `youtube_url` entries as a playlist. When a video ends, the next item plays automatically.
 
 Always access the site at `http://localhost:<port>/` for YouTube playback to work.
 
